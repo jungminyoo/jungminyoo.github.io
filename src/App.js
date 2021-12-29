@@ -1,7 +1,11 @@
+import GlobalStyles from "Components/GlobalStyles";
+import Routers from "Components/Router";
+
 const App = () => {
   return (
     <>
-      <h1>Hello I'm Jungmin Yoo</h1>
+      <Routers />
+      <GlobalStyles />
     </>
   );
 };
