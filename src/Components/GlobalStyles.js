@@ -12,9 +12,9 @@ const GlobalStyles = createGlobalStyle`
     }
     body{
         font-family: 'Noto Sans KR', sans-serif;
-        -ms-overflow-style: none;  /* IE and Edge */
+        -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none;
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             display: none;
         }
     }

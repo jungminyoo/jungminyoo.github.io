@@ -25,6 +25,7 @@ const SlightUp = keyframes`
 `;
 
 const Container = styled.div`
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -194,6 +195,12 @@ const SNSGridScroll = styled.div`
   transition: all 0.5s ease-in-out;
   visibility: ${(props) => (props.scrolled ? "visible" : "hidden")};
   opacity: ${(props) => (props.scrolled ? "1" : "0")};
+
+  @media only screen and (max-width: 640px) {
+    right: 4vw;
+    grid-auto-columns: 35px;
+    grid-template-rows: 35px;
+  }
 `;
 
 const SNSContainer = styled.a`

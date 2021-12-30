@@ -12,17 +12,25 @@ const Container = styled.div`
   position: fixed;
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: max-content 1fr;
   padding-top: 15vh;
+  padding-left: 320px;
+  overflow-y: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media only screen and (max-width: 1080px) {
     padding-top: 12vh;
+    padding-left: 220px;
     grid-template-columns: 1fr 6fr;
   }
 
   @media only screen and (max-width: 640px) {
     padding-top: 10vh;
+    padding-left: 25vw;
     grid-template-columns: 1fr 4fr;
   }
 `;
