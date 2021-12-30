@@ -9,8 +9,12 @@ const LandingContainer = class extends React.Component {
     this.setState({ scroll: window.scrollY });
   };
   componentDidMount = () => {
+    const location = window.location.pathname;
+
     window.addEventListener("scroll", this.scrollChange);
-    window.scrollTo(0, 0);
+    if (location === "/") {
+      window.scrollTo(0, 0);
+    }
   };
   componentWillUnmount = () => {
     window.removeEventListener("scroll", this.scrollChange);
