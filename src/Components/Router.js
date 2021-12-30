@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 import Landing from "Routes/Landing";
 import { useEffect, useState } from "react";
+import Navigation from "./Navigation";
 
 const Container = styled.div`
-  height: 1000vh;
+  height: 200vh;
 `;
 
 const Routers = () => {
@@ -19,6 +20,7 @@ const Routers = () => {
     <Router>
       <Container>
         <Landing animationDone={animationDone} />
+        <Navigation />
         <Routes></Routes>
       </Container>
     </Router>

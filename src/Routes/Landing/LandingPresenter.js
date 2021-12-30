@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import scrolldown from "Assets/scrolldown.svg";
+import instagram from "Assets/instagram.svg";
+import github from "Assets/github.svg";
 
 const Gradient = keyframes`
     0%{
@@ -36,8 +38,21 @@ const Container = styled.div`
   -moz-animation: ${Gradient} 5s ease infinite;
   animation: ${Gradient} 5s ease infinite;
 
-  @media only screen and (max-width: 640px) {
+  &:hover {
+    ${(props) =>
+      props.scrolled
+        ? css`
+            cursor: pointer;
+          `
+        : ""};
+  }
+
+  @media only screen and (max-width: 1080px) {
     height: ${(props) => (props.scrolled ? "12vh" : "100vh")};
+  }
+
+  @media only screen and (max-width: 640px) {
+    height: ${(props) => (props.scrolled ? "10vh" : "100vh")};
   }
 `;
 
@@ -45,10 +60,6 @@ const SubContainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -76,10 +87,17 @@ const Title = styled.h1`
           animation-delay: 1s;
         `}
   @media only screen and (max-width: 1080px) {
-    font-size: ${(props) => (props.scrolled ? "70px" : "100px")};
+    font-size: ${(props) => (props.scrolled ? "50px" : "100px")};
   }
   @media only screen and (max-width: 640px) {
-    font-size: ${(props) => (props.scrolled ? "12vw" : "15vw")};
+    font-size: ${(props) => (props.scrolled ? "8vw" : "15vw")};
+    ${(props) =>
+      props.scrolled
+        ? css`
+            left: 5vw;
+            transform: translateX(0) translateY(-50%);
+          `
+        : ""}
   }
 `;
 
@@ -97,7 +115,10 @@ const Slogan = styled.h3`
   left: 50%;
   top: 53%;
   transform: translateX(-50%);
+
   transition: all 0.5s ease-in-out;
+  visibility: ${(props) =>
+    props.animationDone && !props.scrolled ? "visible" : "hidden"};
   opacity: ${(props) => (props.animationDone && !props.scrolled ? "1" : "0")};
 
   @media only screen and (max-width: 1080px) {
@@ -119,6 +140,8 @@ const DownSvg = styled.img`
   bottom: 50px;
   transform: translateX(-50%);
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+  visibility: ${(props) =>
+    props.animationDone && !props.scrolled ? "visible" : "hidden"};
   opacity: ${(props) => (props.animationDone && !props.scrolled ? "1" : "0")};
 
   &:hover {
@@ -126,25 +149,151 @@ const DownSvg = styled.img`
   }
 `;
 
-const LandingPresenter = ({ scroll, animationDone }) => (
-  <Container scrolled={scroll > 100}>
-    <SubContainer>
-      <Title scrolled={scroll > 100} animationDone={animationDone}>
-        {"<dev Yoo />"}
-      </Title>
-      <Slogan animationDone={animationDone} scrolled={scroll > 100}>
-        기획하는 개발자.
-        <br />
-        디자인하는 엔지니어.
-      </Slogan>
-      <DownSvg
-        src={scrolldown}
-        animationDone={animationDone}
-        scrolled={scroll > 100}
-        onClick={() => window.scrollTo(0, 101)}
-      />
-    </SubContainer>
-  </Container>
-);
+const SNSGridUnscroll = styled.div`
+  position: absolute;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 40px;
+  grid-auto-rows: 40px;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+
+  transition: all 0.5s ease-in-out;
+  visibility: ${(props) =>
+    props.animationDone && !props.scrolled ? "visible" : "hidden"};
+  opacity: ${(props) => (props.animationDone && !props.scrolled ? "1" : "0")};
+
+  @media only screen and (max-width: 640px) {
+    grid-auto-flow: column;
+    grid-template-rows: 40px;
+    grid-auto-columns: 40px;
+    right: 50%;
+    top: 62%;
+    transform: translateX(50%);
+  }
+`;
+
+const SNSGridScroll = styled.div`
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40px;
+  grid-template-rows: 40px;
+
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+
+  transition: all 0.5s ease-in-out;
+  visibility: ${(props) => (props.scrolled ? "visible" : "hidden")};
+  opacity: ${(props) => (props.scrolled ? "1" : "0")};
+`;
+
+const SNSContainer = styled.a`
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  position: relative;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(105%, 105%);
+  }
+  &:hover img {
+    opacity: 1;
+  }
+`;
+
+const SNSImg = styled.img`
+  width: 70%;
+  height: 70%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 70%;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const SNSList = [
+  {
+    src: instagram,
+    href: "https://www.instagram.com/dev_yoo0918",
+  },
+  {
+    src: github,
+    href: "https://github.com/jungminyoo",
+  },
+];
+
+const LandingPresenter = ({ scroll, animationDone }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (scroll > 100) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }, [scroll]);
+
+  return (
+    <Container
+      scrolled={scrolled}
+      onClick={() => (scrolled ? window.scrollTo(0, 0) : null)}
+    >
+      <SubContainer>
+        <Title scrolled={scrolled} animationDone={animationDone}>
+          {"<dev Yoo />"}
+        </Title>
+        <Slogan animationDone={animationDone} scrolled={scrolled}>
+          기획하는 개발자.
+          <br />
+          디자인하는 엔지니어.
+        </Slogan>
+        <DownSvg
+          src={scrolldown}
+          animationDone={animationDone}
+          scrolled={scrolled}
+          onClick={() => window.scrollTo(0, 101)}
+        />
+        <SNSGridScroll scrolled={scrolled}>
+          {SNSList.map((SNS, index) => (
+            <SNSContainer key={index} href={SNS.href} target="_blank">
+              <SNSImg src={SNS.src} alt="instagram" />
+            </SNSContainer>
+          ))}
+        </SNSGridScroll>
+        <SNSGridUnscroll scrolled={scrolled} animationDone={animationDone}>
+          {SNSList.map((SNS, index) => (
+            <SNSContainer key={index} href={SNS.href} target="_blank">
+              <SNSImg src={SNS.src} alt="instagram" />
+            </SNSContainer>
+          ))}
+        </SNSGridUnscroll>
+      </SubContainer>
+    </Container>
+  );
+};
 
 export default LandingPresenter;
