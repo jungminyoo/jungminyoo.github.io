@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router";
-import { HashRouter as Router, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router";
+import { HashRouter as Router } from "react-router-dom";
 import styled from "styled-components";
 
 import Landing from "Routes/Landing";
@@ -30,7 +30,6 @@ const Container = styled.div`
 const RoutesContainer = styled.div`
   width: 100%;
   height: 100%;
-  padding: 20px;
 
   transition: all 0.2s ease-in-out;
 
@@ -38,6 +37,40 @@ const RoutesContainer = styled.div`
     padding: 3vw;
   }
 `;
+
+const RouteContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  @media only screen and (max-width: 640px) {
+    padding: 3vw;
+  }
+`;
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  return (
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames="page" timeout={2000}>
+        <Routes>
+          {routesList.map(({ path, Component }, index) => (
+            <Route
+              key={index}
+              exact
+              path={path}
+              element={
+                <RouteContainer>
+                  <Component />
+                </RouteContainer>
+              }
+            ></Route>
+          ))}
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+};
 
 const Routers = () => {
   const [animationDone, setDone] = useState(false);
@@ -52,20 +85,7 @@ const Routers = () => {
         <Landing animationDone={animationDone} />
         <Navigation />
         <RoutesContainer>
-          <TransitionGroup>
-            <CSSTransition classNames="page" timeout={2000}>
-              <Routes>
-                {routesList.map(({ path, Component }, index) => (
-                  <Route
-                    key={index}
-                    exact
-                    path={path}
-                    element={<Component />}
-                  ></Route>
-                ))}
-              </Routes>
-            </CSSTransition>
-          </TransitionGroup>
+          <AnimatedRoutes />
         </RoutesContainer>
       </Container>
     </Router>
