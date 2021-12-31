@@ -4,7 +4,7 @@ import Career from "Routes/Career";
 import Education from "Routes/Education";
 import Intro from "Routes/Intro";
 
-const routesList = [
+const RoutesList = [
   {
     path: "/",
     name: "Intro",
@@ -43,4 +43,4 @@ const routesList = [
   },
 ];
 
-export default routesList;
+export default RoutesList;

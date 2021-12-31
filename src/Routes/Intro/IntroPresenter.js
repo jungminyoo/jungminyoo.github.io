@@ -140,8 +140,8 @@ const IntroPresenter = ({ lang, setLang, innerWidth }) => (
       ),
       EN: (
         <IntroQuote>
-          "Developer who plan,{innerWidth <= 640 ? <br /> : " "}Engineer who
-          design."
+          "Developer who plans,{innerWidth <= 640 ? <br /> : " "}Engineer who
+          designs."
         </IntroQuote>
       ),
     })}
@@ -150,7 +150,7 @@ const IntroPresenter = ({ lang, setLang, innerWidth }) => (
       KR: (
         <IntroDescription>
           위의 모토를 가지고 열심히 개발하는{" "}
-          <strong className="purple">풀스택 웹개발자</strong>입니다.
+          <strong className="purple">풀스택 웹 개발자</strong>입니다.
           <br />
           단순히 개발만 하는 것이 아닌{" "}
           <strong className="blue">서비스 기획</strong>,{" "}

@@ -1,26 +1,4 @@
-import reactJS from "Assets/react.svg";
-import html5 from "Assets/html5.svg";
-import css3 from "Assets/css3.svg";
-import sass from "Assets/sass.svg";
-import javascript from "Assets/javascript.svg";
-import pug from "Assets/pug.svg";
-import nodedotjs from "Assets/nodedotjs.svg";
-import express from "Assets/express.svg";
-import mongodb from "Assets/mongodb.svg";
-import socketdotio from "Assets/socketdotio.svg";
-import webrtc from "Assets/webrtc.svg";
-import heroku from "Assets/heroku.svg";
-import amazons3 from "Assets/amazons3.svg";
-import netlify from "Assets/netlify.svg";
-import c from "Assets/c.svg";
-import cplusplus from "Assets/cplusplus.svg";
-import python from "Assets/python.svg";
-import java from "Assets/java.svg";
-import typescript from "Assets/typescript.svg";
-import git from "Assets/git.svg";
-import github from "Assets/github.svg";
-import nextdotjs from "Assets/nextdotjs.svg";
-import graphql from "Assets/graphql.svg";
+import LogosList from "./LogosList";
 
 const SkillsList = [
   {
@@ -30,37 +8,37 @@ const SkillsList = [
         name: "React.js",
         proficiency: 80,
         color: "#61DAFB",
-        logo: reactJS,
+        logo: LogosList["reactJS"],
       },
       {
         name: "HTML5",
         proficiency: 90,
         color: "#E34F26",
-        logo: html5,
+        logo: LogosList["html5"],
       },
       {
         name: "CSS3",
         proficiency: 70,
         color: "#1572B6",
-        logo: css3,
+        logo: LogosList["css3"],
       },
       {
         name: "SCSS",
         proficiency: 70,
         color: "#CC6699",
-        logo: sass,
+        logo: LogosList["sass"],
       },
       {
         name: "JavaScript",
         proficiency: 80,
         color: "#F7DF1E",
-        logo: javascript,
+        logo: LogosList["javascript"],
       },
       {
         name: "Pug",
         proficiency: 80,
         color: "#A86454",
-        logo: pug,
+        logo: LogosList["pug"],
       },
     ],
   },
@@ -71,31 +49,31 @@ const SkillsList = [
         name: "Node.js",
         proficiency: 80,
         color: "#339933",
-        logo: nodedotjs,
+        logo: LogosList["nodedotjs"],
       },
       {
         name: "Express",
         proficiency: 70,
         color: "#000000",
-        logo: express,
+        logo: LogosList["express"],
       },
       {
         name: "MongoDB",
         proficiency: 70,
         color: "#47A248",
-        logo: mongodb,
+        logo: LogosList["mongodb"],
       },
       {
         name: "Socket.io",
         proficiency: 50,
         color: "#010101",
-        logo: socketdotio,
+        logo: LogosList["socketdotio"],
       },
       {
         name: "WebRTC",
         proficiency: 30,
         color: "#333333",
-        logo: webrtc,
+        logo: LogosList["webrtc"],
       },
     ],
   },
@@ -106,19 +84,19 @@ const SkillsList = [
         name: "Heroku",
         proficiency: 0,
         color: "#430098",
-        logo: heroku,
+        logo: LogosList["heroku"],
       },
       {
         name: "AWS S3",
         proficiency: 0,
         color: "#569A31",
-        logo: amazons3,
+        logo: LogosList["amazons3"],
       },
       {
         name: "Netlify",
         proficiency: 0,
         color: "#00C7B7",
-        logo: netlify,
+        logo: LogosList["netlify"],
       },
     ],
   },
@@ -129,31 +107,31 @@ const SkillsList = [
         name: "C",
         proficiency: 90,
         color: "#A8B9CC",
-        logo: c,
+        logo: LogosList["c"],
       },
       {
         name: "C++",
         proficiency: 60,
         color: "#00599C",
-        logo: cplusplus,
+        logo: LogosList["cplusplus"],
       },
       {
         name: "Python",
         proficiency: 70,
         color: "#3776AB",
-        logo: python,
+        logo: LogosList["python"],
       },
       {
         name: "Java",
         proficiency: 20,
         color: "#007396",
-        logo: java,
+        logo: LogosList["java"],
       },
       {
         name: "TypeScript",
         proficiency: 40,
         color: "#3178C6",
-        logo: typescript,
+        logo: LogosList["typescript"],
       },
     ],
   },
@@ -164,13 +142,13 @@ const SkillsList = [
         name: "Git",
         proficiency: 80,
         color: "#F05032",
-        logo: git,
+        logo: LogosList["git"],
       },
       {
         name: "GitHub",
         proficiency: 80,
         color: "#181717",
-        logo: github,
+        logo: LogosList["github"],
       },
     ],
   },
@@ -181,22 +159,38 @@ const SkillsList = [
         name: "Next.js",
         proficiency: 0,
         color: "#000000",
-        logo: nextdotjs,
+        logo: LogosList["nextdotjs"],
       },
       {
         name: "GraphQL",
         proficiency: 0,
         color: "#E10098",
-        logo: graphql,
+        logo: LogosList["graphql"],
       },
       {
         name: "React Native",
         proficiency: 0,
         color: "#61DAFB",
-        logo: reactJS,
+        logo: LogosList["reactJS"],
       },
     ],
   },
 ];
+
+export const getSkills = (typeName, skillNames) => {
+  const result = [];
+
+  SkillsList.forEach(
+    (item) =>
+      item.type === typeName &&
+      item.skills.forEach((skill) => {
+        if (skillNames.includes(skill.name)) {
+          result.push(skill.name);
+        }
+      })
+  );
+
+  return result;
+};
 
 export default SkillsList;

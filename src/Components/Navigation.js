@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import routesList from "routesList";
+import RoutesList from "Lists/RoutesList";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -25,6 +25,13 @@ const Container = styled.div`
     padding: 3vw;
     width: 25vw;
   }
+`;
+
+const SubContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  position: relative;
 `;
 
 const SUl = styled.ul`
@@ -77,9 +84,28 @@ const SLink = styled(Link)`
   }
 `;
 
+const Copyright = styled.small`
+  position: absolute;
+  bottom: 15%;
+
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media only screen and (max-width: 1080px) {
+    bottom: 13%;
+    font-size: 10px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 2vw;
+    line-height: 2.3vw;
+    bottom: 10%;
+  }
+`;
+
 const Navigation = () => {
   const getMainName = () =>
-    routesList.filter((route) => route.path === "/")[0].name;
+    RoutesList.filter((route) => route.path === "/")[0].name;
 
   const [current, setCurrent] = useState("");
   const location = useLocation();
@@ -98,18 +124,21 @@ const Navigation = () => {
 
   return (
     <Container>
-      <SUl>
-        {routesList.map(
-          ({ path, name, isNav }, index) =>
-            isNav && (
-              <SLi key={index} isCurrent={current === name}>
-                <SLink to={path} isCurrent={current === name}>
-                  {name}
-                </SLink>
-              </SLi>
-            )
-        )}
-      </SUl>
+      <SubContainer>
+        <SUl>
+          {RoutesList.map(
+            ({ path, name, isNav }, index) =>
+              isNav && (
+                <SLi key={index} isCurrent={current === name}>
+                  <SLink to={path} isCurrent={current === name}>
+                    {name}
+                  </SLink>
+                </SLi>
+              )
+          )}
+        </SUl>
+        <Copyright>&copy; 2022. Jungmin Yoo. ALL RIGHTS RESERVED</Copyright>
+      </SubContainer>
     </Container>
   );
 };

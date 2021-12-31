@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import scrolldown from "Assets/scrolldown.svg";
 import instagram from "Assets/instagram.svg";
-import github from "Assets/github.svg";
+import github from "Assets/SkillLogos/github.svg";
 
 const Gradient = keyframes`
     0%{

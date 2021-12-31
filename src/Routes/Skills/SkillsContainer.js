@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsList from "./SkillsList";
+import SkillsList from "../../Lists/SkillsList";
 import SkillsPresenter from "./SkillsPresenter";
 
 const SkillsContainer = class extends React.Component {

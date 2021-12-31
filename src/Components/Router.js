@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Landing from "Routes/Landing";
 import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import routesList from "routesList";
+import RoutesList from "Lists/RoutesList";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Container = styled.div`
@@ -66,7 +66,7 @@ const AnimatedRoutes = () => {
     <STransitionGroup>
       <CSSTransition key={location.key} classNames="page" timeout={2000}>
         <Routes>
-          {routesList.map(({ path, Component }, index) => (
+          {RoutesList.map(({ path, Component }, index) => (
             <Route
               key={index}
               exact
