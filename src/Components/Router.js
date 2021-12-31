@@ -56,10 +56,14 @@ const RouteContainer = styled.div`
   }
 `;
 
+const STransitionGroup = styled(TransitionGroup)`
+  height: 100%;
+`;
+
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <TransitionGroup>
+    <STransitionGroup>
       <CSSTransition key={location.key} classNames="page" timeout={2000}>
         <Routes>
           {routesList.map(({ path, Component }, index) => (
@@ -76,7 +80,7 @@ const AnimatedRoutes = () => {
           ))}
         </Routes>
       </CSSTransition>
-    </TransitionGroup>
+    </STransitionGroup>
   );
 };
 
