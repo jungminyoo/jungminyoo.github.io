@@ -115,8 +115,8 @@ const Navigation = () => {
       location.pathname === "/"
         ? getMainName()
         : location.pathname
+            .split("/")[1]
             .split("")
-            .filter((item) => item !== "/")
             .map((item, i) => (i === 0 ? item.toUpperCase() : item))
             .join("")
     );
@@ -130,7 +130,10 @@ const Navigation = () => {
             ({ path, name, isNav }, index) =>
               isNav && (
                 <SLi key={index} isCurrent={current === name}>
-                  <SLink to={path} isCurrent={current === name}>
+                  <SLink
+                    to={path.includes("*") ? path.replace("*", "1") : path}
+                    isCurrent={current === name}
+                  >
                     {name}
                   </SLink>
                 </SLi>

@@ -1,11 +1,4 @@
-import {
-  generateSkill,
-  SkillCircle,
-  SkillLogo,
-  SkillName,
-  SkillWave,
-  WaveContainer,
-} from "Components/Skill";
+import { generateSkill } from "Components/Skill";
 import React from "react";
 import styled from "styled-components";
 
@@ -85,7 +78,15 @@ const SkillsPresenter = ({ skills }) => (
         <SkillsBox key={index}>
           <SkillsTitle>{item.type}</SkillsTitle>
           <SkillsHr />
-          <SkillGrid>{item.skills.map(generateSkill)}</SkillGrid>
+          <SkillGrid>
+            {item.skills.map((skill) =>
+              generateSkill(
+                skill,
+                { size: ["80px", "18vw"], fontSize: ["14px", "3.2vw"] },
+                index
+              )
+            )}
+          </SkillGrid>
         </SkillsBox>
       ))}
     </SkillsGrid>

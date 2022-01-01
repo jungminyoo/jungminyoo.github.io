@@ -1,7 +1,8 @@
 import ImagesList from "./ImagesList";
 import { getSkills } from "./SkillsList";
-import { faLink, faGithub } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import LogosList from "./LogosList";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ProjectsList = [
   {
@@ -19,11 +20,12 @@ const ProjectsList = [
         role: ["프론트엔드 개발", "백엔드 개발", "UI/UX 디자인"],
         description:
           "첫 개인 프로젝트로, 지인을 통해 외주를 받아 진행했습니다. Pug를 이용하여 SSR을 기반으로 렌더링 했으며, Express.js를 이용하여 백엔드를 구현했습니다.",
-        achievements: [
+        learned: [
           "WYSIWYG 에디터 도입 (Quill)",
           "SSR(Server-Side Rendering)에 대한 이해",
           "Express.js 관련 각종 라이브러리 활용",
         ],
+        achievements: [],
       },
       EN: {
         title: "Dental Clinic Promotion Website",
@@ -35,11 +37,12 @@ const ProjectsList = [
         role: ["Front-end Develop", "Back-end Develop", "UI/UX Design"],
         description:
           "My first personal project\nFront-end render using SSR, Back-end development using Express.js",
-        achievements: [
+        learned: [
           "Adoption of WYSIWYG Editor (Quill)",
           "Comprehension of SSR(Server-Side Rendering)",
           "Used various libraries related to Express.js",
         ],
+        achievements: [],
       },
     },
     images: [
@@ -47,21 +50,25 @@ const ProjectsList = [
         id: 1,
         src: ImagesList["miraeHome"],
         alt: "miraeHome",
+        portrait: true,
       },
       {
         id: 2,
         src: ImagesList["miraeNotice"],
         alt: "miraeNotice",
+        portrait: false,
       },
       {
         id: 3,
         src: ImagesList["miraeMap"],
         alt: "miraeMap",
+        portrait: false,
       },
       {
         id: 4,
         src: ImagesList["miraeImg"],
         alt: "miraeImg",
+        portrait: false,
       },
     ],
     skillsList: [
@@ -111,11 +118,12 @@ const ProjectsList = [
         role: ["프론트엔드 개발", "서비스 기획", "UI/UX 디자인"],
         description:
           "유튜브 영상 NFT 거래 플랫폼 fanCake의 초기 MVP 프론트엔드 개발을 담당했습니다. 개발 도중 아이템이 피보팅 되는 과정에서 디자인 및 데이터 구조가 변경 됨에 따라 개발 기간이 다소 길어졌습니다. 개발하면서 동시에 사업 기획에 참여하였고, UI/UX 디자인에도 일부 참여했습니다.",
-        achievements: [
+        learned: [
           "백엔드 개발자와의 소통",
           "창업 관련 초기 지식 및 경험",
           "협업 구조 및 코드 아키텍쳐 구성",
         ],
+        achievements: [],
       },
       EN: {
         title: "fanCake - NFT Marketplace Platform for YouTube Videos (MVP)",
@@ -127,11 +135,12 @@ const ProjectsList = [
         role: ["Front-end Develop", "Service Plan", "UI/UX Design"],
         description:
           "I was in charge of the initial MVP front-end development of fanCake, a YouTube video NFT trading platform. The development period has been slightly longer as the design and data structure have changed in the process of pivoting business items during development. I participated in business planning at the same time as I developed it, and I also participated in some UI/UX design.",
-        achievements: [
+        learned: [
           "Communication with back-end developers",
           "Initial knowledge and experience related to start-ups.",
           "Collaborative structure and code architecture construction",
         ],
+        achievements: [],
       },
     },
     images: [],
@@ -171,13 +180,14 @@ const ProjectsList = [
         title: "포트폴리오 사이트",
         team: {
           logo: null,
-          name: "Personal",
+          name: "개인",
           link: "https://github.com/jungminyoo",
         },
         role: ["프론트엔드 개발", "UI/UX 디자인"],
         description:
           "개인 포트폴리오 사이트를 제작했습니다. 2021 트렌드인 Glassmorphism 디자인을 일부 적용했습니다. Container-Presenter 패턴을 적용하고, 자주 쓰이는 코드는 최대한 모듈화 시키고자 노력했습니다.",
-        achievements: ["CSS 활용 능력 향상"],
+        learned: ["CSS 활용 능력 향상"],
+        achievements: [],
       },
       EN: {
         title: "Portfolio Website",
@@ -189,16 +199,11 @@ const ProjectsList = [
         role: ["Front-end Develop", "UI/UX Design"],
         description:
           "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. We tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible.",
-        achievements: ["Improvement of CSS skills"],
+        learned: ["Improvement of CSS skills"],
+        achievements: [],
       },
     },
-    images: [
-      {
-        id: 1,
-        src: "",
-        alt: "",
-      },
-    ],
+    images: [],
     skillsList: [
       {
         id: 1,
@@ -241,6 +246,7 @@ const ProjectsList = [
         role: ["프론트엔드 개발", "백엔드 개발"],
         description:
           "Klaytn을 활용한 한국형 NFT 마켓플레이스를 개발할 예정입니다.",
+        learned: [],
         achievements: [],
       },
       EN: {
@@ -253,6 +259,7 @@ const ProjectsList = [
         role: ["Front-end Develop", "Back-end Develop"],
         description:
           "We are planning to develop a Korean NFT marketplace using Klaytn.",
+        learned: [],
         achievements: [],
       },
     },

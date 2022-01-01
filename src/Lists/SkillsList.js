@@ -185,7 +185,7 @@ export const getSkills = (typeName, skillNames) => {
       item.type === typeName &&
       item.skills.forEach((skill) => {
         if (skillNames.includes(skill.name)) {
-          result.push(skill.name);
+          result.push(skill);
         }
       })
   );

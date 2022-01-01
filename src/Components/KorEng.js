@@ -1,10 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const KorEngGrid = styled.div`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  ${(props) => css`
+    top: ${props.position[0]};
+    right: ${props.position[1]};
+  `}
 
   width: 80px;
   height: 30px;
@@ -61,8 +63,8 @@ const LangBtn = styled.button`
   }
 `;
 
-const KorEng = ({ lang, setLang }) => (
-  <KorEngGrid>
+const KorEng = ({ lang, setLang, position }) => (
+  <KorEngGrid position={position}>
     <LangBtn selected={lang === "KR"} onClick={() => setLang("KR")}>
       KR
     </LangBtn>

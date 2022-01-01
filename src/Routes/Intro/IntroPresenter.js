@@ -113,7 +113,7 @@ const IntroDescription = styled.p`
 
 const IntroPresenter = ({ lang, setLang, innerWidth }) => (
   <Container>
-    <KorEng lang={lang} setLang={setLang} />
+    <KorEng lang={lang} setLang={setLang} position={["20px", "20px"]} />
 
     {changeLang(lang, {
       KR: (

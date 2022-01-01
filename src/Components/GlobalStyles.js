@@ -40,6 +40,28 @@ const GlobalStyles = createGlobalStyle`
         transform: scale(0.9);
         transition: opacity 300ms, transform 300ms;
     }
+
+    .project-enter {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+
+    .project-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    .project-exit {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .project-exit-active {
+        opacity: 0;
+        transform: translateX(-10%);
+        transition: opacity 300ms, transform 300ms;
+    }
 `;
 
 export default GlobalStyles;

@@ -21,8 +21,8 @@ const SkillContainer = styled.div`
 
 export const SkillCircle = styled.div`
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: ${(props) => props.size[0]};
+  height: ${(props) => props.size[0]};
   overflow: hidden;
 
   border-radius: 50%;
@@ -40,8 +40,8 @@ export const SkillCircle = styled.div`
   }
 
   @media only screen and (max-width: 640px) {
-    width: 18vw;
-    height: 18vw;
+    width: ${(props) => props.size[1]};
+    height: ${(props) => props.size[1]};
     box-shadow: 0 2vw 4vw 0 ${(props) => props.color + "2a"};
   }
 `;
@@ -56,12 +56,12 @@ export const SkillLogo = styled.img`
 
 export const SkillName = styled.span`
   text-align: center;
-  font-size: 14px;
+  font-size: ${(props) => props.fontSize[0]} !important;
   font-weight: 300;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   transition: all 0.1s ease-in-out;
   @media only screen and (max-width: 640px) {
-    font-size: 3.2vw;
+    font-size: ${(props) => props.fontSize[1]} !important;
   }
 `;
 
@@ -85,14 +85,16 @@ export const SkillWave = styled.div`
   animation: ${Wave} 15s infinite linear;
 `;
 
-export const generateSkill = (skill, index) => (
+export const generateSkill = (skill, { size, fontSize }, index) => (
   <SkillContainer key={index}>
-    <SkillCircle color={skill.color}>
+    <SkillCircle color={skill.color} size={size}>
       <WaveContainer color={skill.color}>
         <SkillWave proficiency={skill.proficiency} />
       </WaveContainer>
       <SkillLogo src={skill.logo} alt={skill.name} />
     </SkillCircle>
-    <SkillName className="skill_name">{skill.name}</SkillName>
+    <SkillName className="skill_name" fontSize={fontSize}>
+      {skill.name}
+    </SkillName>
   </SkillContainer>
 );

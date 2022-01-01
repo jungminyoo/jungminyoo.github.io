@@ -1,4 +1,3 @@
-import { Route, Routes, useLocation } from "react-router";
 import { HashRouter as Router } from "react-router-dom";
 import styled from "styled-components";
 
@@ -6,7 +5,7 @@ import Landing from "Routes/Landing";
 import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import RoutesList from "Lists/RoutesList";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import AnimatedRoutes from "./AnimatedRoutes";
 
 const Container = styled.div`
   position: fixed;
@@ -46,44 +45,6 @@ const RoutesContainer = styled.div`
   }
 `;
 
-const RouteContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-
-  @media only screen and (max-width: 640px) {
-    padding: 3vw;
-  }
-`;
-
-const STransitionGroup = styled(TransitionGroup)`
-  height: 100%;
-`;
-
-const AnimatedRoutes = () => {
-  const location = useLocation();
-  return (
-    <STransitionGroup>
-      <CSSTransition key={location.key} classNames="page" timeout={2000}>
-        <Routes>
-          {RoutesList.map(({ path, Component }, index) => (
-            <Route
-              key={index}
-              exact
-              path={path}
-              element={
-                <RouteContainer>
-                  <Component />
-                </RouteContainer>
-              }
-            ></Route>
-          ))}
-        </Routes>
-      </CSSTransition>
-    </STransitionGroup>
-  );
-};
-
 const Routers = () => {
   const [animationDone, setDone] = useState(false);
 
@@ -97,7 +58,7 @@ const Routers = () => {
         <Landing animationDone={animationDone} />
         <Navigation />
         <RoutesContainer>
-          <AnimatedRoutes />
+          <AnimatedRoutes routesList={RoutesList} classNames="page" />
         </RoutesContainer>
       </Container>
     </Router>
