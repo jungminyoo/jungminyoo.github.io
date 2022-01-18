@@ -2,7 +2,7 @@ import React from "react";
 
 const EducationPresenter = () => (
   <>
-    <h1>Education</h1>
+    <h1>준비중</h1>
   </>
 );
 

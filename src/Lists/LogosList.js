@@ -22,6 +22,7 @@ import git from "Assets/SkillLogos/git.svg";
 import github from "Assets/SkillLogos/github.svg";
 import nextdotjs from "Assets/SkillLogos/nextdotjs.svg";
 import graphql from "Assets/SkillLogos/graphql.svg";
+import tailwindcss from "Assets/SkillLogos/tailwindcss.svg";
 
 // Project Logos
 import miraeLogo from "Assets/ProjectImages/mirae/miraeLogo.svg";
@@ -55,6 +56,7 @@ const LogosList = {
   github,
   nextdotjs,
   graphql,
+  tailwindcss,
   miraeLogo,
   geneverLogo,
   fanCakeLogo,

@@ -143,7 +143,26 @@ const ProjectsList = [
         achievements: [],
       },
     },
-    images: [],
+    images: [
+      {
+        id: 1,
+        src: ImagesList["fanCakeHome"],
+        alt: "fanCakeHome",
+        portrait: true,
+      },
+      {
+        id: 2,
+        src: ImagesList["fanCakePurchase"],
+        alt: "fanCakePurchase",
+        portrait: false,
+      },
+      {
+        id: 3,
+        src: ImagesList["fanCakeWallet"],
+        alt: "fanCakeWallet",
+        portrait: true,
+      },
+    ],
     skillsList: [
       {
         id: 1,
@@ -186,7 +205,7 @@ const ProjectsList = [
         role: ["프론트엔드 개발", "UI/UX 디자인"],
         description:
           "개인 포트폴리오 사이트를 제작했습니다. 2021 트렌드인 Glassmorphism 디자인을 일부 적용했습니다. Container-Presenter 패턴을 적용하고, 자주 쓰이는 코드는 최대한 모듈화 시키고자 노력했습니다.",
-        learned: ["CSS 활용 능력 향상"],
+        learned: ["CSS 활용 능력 향상", "코드 모듈화"],
         achievements: [],
       },
       EN: {
@@ -199,11 +218,36 @@ const ProjectsList = [
         role: ["Front-end Develop", "UI/UX Design"],
         description:
           "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. We tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible.",
-        learned: ["Improvement of CSS skills"],
+        learned: ["Improvement of CSS skills", "Modulization of Codes"],
         achievements: [],
       },
     },
-    images: [],
+    images: [
+      {
+        id: 1,
+        src: ImagesList["portfolioLanding"],
+        alt: "portfolioLanding",
+        portrait: false,
+      },
+      {
+        id: 2,
+        src: ImagesList["portfolioIntro"],
+        alt: "portfolioIntro",
+        portrait: false,
+      },
+      {
+        id: 3,
+        src: ImagesList["portfolioSkills"],
+        alt: "portfolioSkills",
+        portrait: false,
+      },
+      {
+        id: 4,
+        src: ImagesList["portfolioProjects"],
+        alt: "portfolioProjects",
+        portrait: false,
+      },
+    ],
     skillsList: [
       {
         id: 1,
@@ -237,33 +281,40 @@ const ProjectsList = [
     duration: "2021/12/30 - Current",
     content: {
       KR: {
-        title: "한국형 NFT 마켓플레이스",
+        title: "Casso Pi - 미래 아티스트들을 위한 NFT 마켓플레이스",
         team: {
           logo: null,
           name: "새폴더",
           link: "https://github.com/sefolder",
         },
-        role: ["프론트엔드 개발", "백엔드 개발"],
+        role: ["프론트엔드 개발"],
         description:
-          "Klaytn을 활용한 한국형 NFT 마켓플레이스를 개발할 예정입니다.",
+          "Klaytn을 기반으로 미래 아티스트들을 위한 NFT 마켓플레이스, Casso Pi를 개발할 예정입니다.",
         learned: [],
         achievements: [],
       },
       EN: {
-        title: "Korean NFT Marketplace",
+        title: "Casso Pi - NFT Marketplace for Future Artists",
         team: {
           logo: null,
           name: "New Folder",
           link: "https://github.com/sefolder",
         },
-        role: ["Front-end Develop", "Back-end Develop"],
+        role: ["Front-end Develop"],
         description:
-          "We are planning to develop a Korean NFT marketplace using Klaytn.",
+          "We are planning to develop a NFT marketplace for future artists, Casso Pi based on Klaytn.",
         learned: [],
         achievements: [],
       },
     },
-    images: [],
+    images: [
+      {
+        id: 1,
+        src: ImagesList["developing"],
+        alt: "developing",
+        portrait: false,
+      },
+    ],
     skillsList: [
       {
         id: 1,
@@ -275,11 +326,6 @@ const ProjectsList = [
           "HTML5",
           "SCSS",
         ]),
-      },
-      {
-        id: 2,
-        type: "Back-end",
-        skills: getSkills("Back-end", ["Node.js", "Express.js", "MongoDB"]),
       },
     ],
     links: [],
