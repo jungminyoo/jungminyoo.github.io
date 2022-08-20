@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.651c0ac3.js",
+    "main.js": "/static/js/main.e412e0cb.js",
     "static/media/fanCakeHome.png": "/static/media/fanCakeHome.0ecdcf1af27acac5d2b5.png",
     "static/media/miraeHome.png": "/static/media/miraeHome.634edba61e4ed0ed5ba1.png",
+    "static/media/cassopiMarket.png": "/static/media/cassopiMarket.c9285a69879c5b8d2722.png",
     "static/media/miraeImg.png": "/static/media/miraeImg.7be62ce65d17a632e8a4.png",
+    "static/media/cassopiTitle.png": "/static/media/cassopiTitle.a6ed2db96adb91a505a4.png",
+    "static/media/cassopiBuy.png": "/static/media/cassopiBuy.2917cbdd83b21962a3a6.png",
     "static/media/portfolioLanding.png": "/static/media/portfolioLanding.e795d44cba9faab47e73.png",
     "static/media/portfolioLogo.png": "/static/media/portfolioLogo.9f48cbd39a0a2d5c1710.png",
     "static/media/portfolioProjects.png": "/static/media/portfolioProjects.66cb6210a172b37d6843.png",
@@ -12,11 +15,14 @@
     "static/media/miraeMap.png": "/static/media/miraeMap.b97f343b1bb7c6a0ccc2.png",
     "static/media/portfolioSkills.png": "/static/media/portfolioSkills.1d1b953a94e854dbc5bb.png",
     "static/media/fanCakeLogo.png": "/static/media/fanCakeLogo.204a32b8afa5aea149a4.png",
+    "static/media/cassopiMinting.png": "/static/media/cassopiMinting.71a7ce381f901e68b096.png",
     "static/media/mimoji.png": "/static/media/mimoji.b6d401d88d48a514ad68.png",
     "static/media/portfolioIntro.png": "/static/media/portfolioIntro.36e6cd32d3954a02c1ea.png",
+    "static/media/cassopiLogin.png": "/static/media/cassopiLogin.0f687732037650ad1045.png",
     "static/media/miraeNotice.png": "/static/media/miraeNotice.4045755512b7f6cdb049.png",
     "static/media/developing.png": "/static/media/developing.3005ca67d80702b204ed.png",
     "static/media/geneverLogo.png": "/static/media/geneverLogo.9d3fc2745b7d600b6113.png",
+    "static/media/cassopiLogo.png": "/static/media/cassopiLogo.350228e58bc6805506f6.png",
     "static/media/netlify.svg": "/static/media/netlify.25db89b7b0363b73db58ae478f70fe77.svg",
     "static/media/pug.svg": "/static/media/pug.d0eb53026617b9bbea9a2dc69af102bc.svg",
     "static/media/miraeLogo.svg": "/static/media/miraeLogo.408f78fd4807852d76711610b0675699.svg",
@@ -26,6 +32,7 @@
     "static/media/nodedotjs.svg": "/static/media/nodedotjs.6d0ce605479079334bce77dc7c3be9ab.svg",
     "static/media/python.svg": "/static/media/python.e146c98dc5517bd9c7e63d6f63a6a1df.svg",
     "static/media/nextdotjs.svg": "/static/media/nextdotjs.02171293962bc80585c6e12ced8ca1c7.svg",
+    "static/media/redux.svg": "/static/media/redux.a80e92c35427b6aed81fcc8f1dc285f7.svg",
     "static/media/typescript.svg": "/static/media/typescript.1b46c028879d6c94a56e6dfc1fd6797b.svg",
     "static/media/java.svg": "/static/media/java.7883010b90edfed49daa57f3b41b0833.svg",
     "static/media/sass.svg": "/static/media/sass.f39b61fa63da56122e4767f8ce57939b.svg",
@@ -47,9 +54,9 @@
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.e17125baa33c4c94988f2094042b15bc.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.87878d5ffd25a1bc7de02c4c630a5c98.svg",
-    "main.651c0ac3.js.map": "/static/js/main.651c0ac3.js.map"
+    "main.e412e0cb.js.map": "/static/js/main.e412e0cb.js.map"
   },
   "entrypoints": [
-    "static/js/main.651c0ac3.js"
+    "static/js/main.e412e0cb.js"
   ]
 }
