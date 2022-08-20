@@ -23,11 +23,13 @@ import github from "Assets/SkillLogos/github.svg";
 import nextdotjs from "Assets/SkillLogos/nextdotjs.svg";
 import graphql from "Assets/SkillLogos/graphql.svg";
 import tailwindcss from "Assets/SkillLogos/tailwindcss.svg";
+import redux from "Assets/SkillLogos/redux.svg";
 
 // Project Logos
 import miraeLogo from "Assets/ProjectImages/mirae/miraeLogo.svg";
 import fanCakeLogo from "Assets/ProjectImages/fanCake/fanCakeLogo.png";
 import portfolioLogo from "Assets/ProjectImages/portfolio/portfolioLogo.png";
+import cassopiLogo from "Assets/ProjectImages/cassopi/cassopiLogo.png";
 
 // Team Logos
 import geneverLogo from "Assets/ProjectImages/fanCake/geneverLogo.png";
@@ -57,10 +59,12 @@ const LogosList = {
   nextdotjs,
   graphql,
   tailwindcss,
+  redux,
   miraeLogo,
   geneverLogo,
   fanCakeLogo,
   portfolioLogo,
+  cassopiLogo,
 };
 
 export default LogosList;

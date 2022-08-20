@@ -10,6 +10,11 @@ import portfolioLanding from "Assets/ProjectImages/portfolio/portfolioLanding.pn
 import portfolioIntro from "Assets/ProjectImages/portfolio/portfolioIntro.png";
 import portfolioSkills from "Assets/ProjectImages/portfolio/portfolioSkills.png";
 import portfolioProjects from "Assets/ProjectImages/portfolio/portfolioProjects.png";
+import cassopiTitle from "Assets/ProjectImages/cassopi/cassopiTitle.png";
+import cassopiLogin from "Assets/ProjectImages/cassopi/cassopiLogin.png";
+import cassopiMinting from "Assets/ProjectImages/cassopi/cassopiMinting.png";
+import cassopiMarket from "Assets/ProjectImages/cassopi/cassopiMarket.png";
+import cassopiBuy from "Assets/ProjectImages/cassopi/cassopiBuy.png";
 import developing from "Assets/ProjectImages/developing.png";
 
 const ImagesList = {
@@ -25,6 +30,11 @@ const ImagesList = {
   portfolioIntro,
   portfolioSkills,
   portfolioProjects,
+  cassopiLogin,
+  cassopiMinting,
+  cassopiTitle,
+  cassopiBuy,
+  cassopiMarket,
 };
 
 export default ImagesList;

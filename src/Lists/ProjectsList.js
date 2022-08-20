@@ -2,7 +2,7 @@ import ImagesList from "./ImagesList";
 import { getSkills } from "./SkillsList";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import LogosList from "./LogosList";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const ProjectsList = [
   {
@@ -277,11 +277,11 @@ const ProjectsList = [
   },
   {
     id: 4,
-    logo: null,
-    duration: "2021/12/30 - Current",
+    logo: LogosList["cassopiLogo"],
+    duration: "2021/12/30 - 2022/03/11",
     content: {
       KR: {
-        title: "Casso Pi - 미래 아티스트들을 위한 NFT 마켓플레이스",
+        title: "CassoPi - 미래 아티스트들을 위한 NFT 마켓플레이스",
         team: {
           logo: null,
           name: "새폴더",
@@ -289,12 +289,19 @@ const ProjectsList = [
         },
         role: ["프론트엔드 개발"],
         description:
-          "Klaytn을 기반으로 미래 아티스트들을 위한 NFT 마켓플레이스, Casso Pi를 개발할 예정입니다.",
-        learned: [],
-        achievements: [],
+          "Klaytn을 기반으로 미래 아티스트들을 위한 NFT 마켓플레이스, CassoPi를 개발하였습니다.",
+        learned: [
+          "NextJS 적용을 통한 SSR에 대한 이해",
+          "Kakao Klip API와의 연동 (Auth, Minting 등)",
+          "Redux를 이용한 상태관리",
+        ],
+        achievements: [
+          "성균관대학교 SPARK",
+          "성균관대학교 S-TOP 웹/어플리케이션 부문 출품",
+        ],
       },
       EN: {
-        title: "Casso Pi - NFT Marketplace for Future Artists",
+        title: "CassoPi - NFT Marketplace for Future Artists",
         team: {
           logo: null,
           name: "New Folder",
@@ -302,16 +309,44 @@ const ProjectsList = [
         },
         role: ["Front-end Develop"],
         description:
-          "We are planning to develop a NFT marketplace for future artists, Casso Pi based on Klaytn.",
-        learned: [],
-        achievements: [],
+          "I developed an NFT marketplace for future artists, CassoPi based on Klaytn.",
+        learned: [
+          "Understanding SSR through NextJS",
+          "Interworking with Kakao Clip API (Auth, Minting, etc.)",
+          "State Management using Redux",
+        ],
+        achievements: ["SKKU SPARK", "SKKU S-TOP Web/Application Exhibition"],
       },
     },
     images: [
       {
         id: 1,
-        src: ImagesList["developing"],
-        alt: "developing",
+        src: ImagesList["cassopiTitle"],
+        alt: "cassopiTitle",
+        portrait: false,
+      },
+      {
+        id: 2,
+        src: ImagesList["cassopiLogin"],
+        alt: "cassopiLogin",
+        portrait: false,
+      },
+      {
+        id: 3,
+        src: ImagesList["cassopiMarket"],
+        alt: "cassopiMarket",
+        portrait: false,
+      },
+      {
+        id: 4,
+        src: ImagesList["cassopiBuy"],
+        alt: "cassopiBuy",
+        portrait: false,
+      },
+      {
+        id: 5,
+        src: ImagesList["cassopiMinting"],
+        alt: "cassopiMinting",
         portrait: false,
       },
     ],
@@ -325,10 +360,36 @@ const ProjectsList = [
           "JavaScript",
           "HTML5",
           "SCSS",
+          "Redux",
         ]),
       },
     ],
-    links: [],
+    links: [
+      {
+        id: 1,
+        type: "Website",
+        link: "https://www.cassopi.io/",
+        icon: faLink,
+      },
+      {
+        id: 2,
+        type: "Website",
+        link: "https://s-top.cs.skku.edu/s-top/5/exhibition/112",
+        icon: faLink,
+      },
+      {
+        id: 3,
+        type: "Repository",
+        link: "https://github.com/jungminyoo/jungminyoo.github.io",
+        icon: faGithub,
+      },
+      {
+        id: 4,
+        type: "YouTube",
+        link: "https://www.youtube.com/watch?v=QQBFlpk2yZY",
+        icon: faYoutube,
+      },
+    ],
   },
 ];
 

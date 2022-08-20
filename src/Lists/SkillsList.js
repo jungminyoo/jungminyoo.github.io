@@ -52,6 +52,12 @@ const SkillsList = [
         color: "#A86454",
         logo: LogosList["pug"],
       },
+      {
+        name: "Redux",
+        proficiency: 60,
+        color: "#764ABC",
+        logo: LogosList["redux"],
+      },
     ],
   },
   {
@@ -180,17 +186,23 @@ const SkillsList = [
         logo: LogosList["tailwindcss"],
       },
       {
-        name: "GraphQL",
+        name: "TypeScript",
         proficiency: 0,
-        color: "#E10098",
-        logo: LogosList["graphql"],
+        color: "#3178C6",
+        logo: LogosList["typescript"],
       },
-      {
-        name: "React Native",
-        proficiency: 0,
-        color: "#61DAFB",
-        logo: LogosList["reactJS"],
-      },
+      // {
+      //   name: "GraphQL",
+      //   proficiency: 0,
+      //   color: "#E10098",
+      //   logo: LogosList["graphql"],
+      // },
+      // {
+      //   name: "React Native",
+      //   proficiency: 0,
+      //   color: "#61DAFB",
+      //   logo: LogosList["reactJS"],
+      // },
     ],
   },
 ];
