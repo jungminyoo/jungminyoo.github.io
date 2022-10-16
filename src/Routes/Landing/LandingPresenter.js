@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import scrolldown from "Assets/scrolldown.svg";
 import instagram from "Assets/instagram.svg";
+import velog from "Assets/velog.svg";
 import github from "Assets/SkillLogos/github.svg";
 
 const Gradient = keyframes`
@@ -251,6 +252,10 @@ const SNSList = [
   {
     src: github,
     href: "https://github.com/jungminyoo",
+  },
+  {
+    src: velog,
+    href: "https://velog.io/@jungminyoo",
   },
 ];
 

@@ -380,7 +380,7 @@ const ProjectsList = [
       {
         id: 3,
         type: "Repository",
-        link: "https://github.com/jungminyoo/jungminyoo.github.io",
+        link: "https://github.com/sefolder/cassopi",
         icon: faGithub,
       },
       {
