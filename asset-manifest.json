@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.e412e0cb.js",
+    "main.js": "/static/js/main.e0a31e52.js",
     "static/media/fanCakeHome.png": "/static/media/fanCakeHome.0ecdcf1af27acac5d2b5.png",
     "static/media/miraeHome.png": "/static/media/miraeHome.634edba61e4ed0ed5ba1.png",
     "static/media/cassopiMarket.png": "/static/media/cassopiMarket.c9285a69879c5b8d2722.png",
@@ -46,6 +46,7 @@
     "static/media/git.svg": "/static/media/git.8ecdc3c556e1278611a7cfbb49c857a2.svg",
     "static/media/heroku.svg": "/static/media/heroku.9dee12cefa8a114bda7e2363938f00ca.svg",
     "static/media/graphql.svg": "/static/media/graphql.1013b0b1c0bfa806d1b610ed7a83970a.svg",
+    "static/media/velog.svg": "/static/media/velog.44c51266a88e04da7987c1f79e9af1b4.svg",
     "static/media/tailwindcss.svg": "/static/media/tailwindcss.ed16fd90d7f5f3fac6ed89321c783b15.svg",
     "static/media/scrolldown.svg": "/static/media/scrolldown.cd361e470b8f376ae92aa969c62082a6.svg",
     "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
@@ -54,9 +55,9 @@
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.e17125baa33c4c94988f2094042b15bc.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.87878d5ffd25a1bc7de02c4c630a5c98.svg",
-    "main.e412e0cb.js.map": "/static/js/main.e412e0cb.js.map"
+    "main.e0a31e52.js.map": "/static/js/main.e0a31e52.js.map"
   },
   "entrypoints": [
-    "static/js/main.e412e0cb.js"
+    "static/js/main.e0a31e52.js"
   ]
 }
