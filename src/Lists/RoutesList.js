@@ -4,6 +4,7 @@ import Career from "Routes/Career";
 import Education from "Routes/Education";
 import Intro from "Routes/Intro";
 import Resume from "Routes/Resume";
+import ProjectsList from "./ProjectsList";
 
 const RoutesList = [
   {
@@ -12,6 +13,7 @@ const RoutesList = [
     name: "Intro",
     Component: <Intro />,
     isNav: false,
+    list: null,
   },
   {
     id: 2,
@@ -19,6 +21,7 @@ const RoutesList = [
     name: "Intro",
     Component: <Intro />,
     isNav: true,
+    list: null,
   },
   {
     id: 3,
@@ -26,6 +29,7 @@ const RoutesList = [
     name: "Skills",
     Component: <Skills />,
     isNav: true,
+    list: null,
   },
   {
     id: 4,
@@ -33,6 +37,7 @@ const RoutesList = [
     name: "Projects",
     Component: <Projects />,
     isNav: true,
+    list: ProjectsList,
   },
   {
     id: 5,
@@ -40,6 +45,7 @@ const RoutesList = [
     name: "Career",
     Component: <Career />,
     isNav: true,
+    list: null,
   },
   {
     id: 6,
@@ -47,6 +53,7 @@ const RoutesList = [
     name: "Education",
     Component: <Education />,
     isNav: true,
+    list: null,
   },
   {
     id: 7,
@@ -54,6 +61,7 @@ const RoutesList = [
     name: "Resume",
     Component: <Resume />,
     isNav: false,
+    list: null,
   },
 ];
 

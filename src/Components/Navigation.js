@@ -128,11 +128,13 @@ const Navigation = () => {
       <SubContainer>
         <SUl>
           {RoutesList.map(
-            ({ path, name, isNav }, index) =>
+            ({ path, name, isNav, id, list }) =>
               isNav && (
-                <SLi key={index} isCurrent={current === name}>
+                <SLi key={id} isCurrent={current === name}>
                   <SLink
-                    to={path.includes("*") ? path.replace("*", "1") : path}
+                    to={
+                      path.includes("*") ? path.replace("*", list.length) : path
+                    }
                     isCurrent={current === name}
                   >
                     {name}

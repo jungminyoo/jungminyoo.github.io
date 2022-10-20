@@ -6,14 +6,13 @@ import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import RoutesList from "Lists/RoutesList";
 import AnimatedRoutes from "./AnimatedRoutes";
-import Resume from "Routes/Resume";
 
 const Container = styled.div`
   position: fixed;
   width: 100%;
   height: 100vh;
   padding-top: 15vh;
-  padding-left: 320px;
+  padding-left: ${(props) => (props.seeNav ? "320px" : "0px")};
   overflow-y: scroll;
 
   -ms-overflow-style: none; /* IE and Edge */
@@ -49,15 +48,22 @@ const RoutesContainer = styled.div`
 const Routers = () => {
   const [animationDone, setDone] = useState(false);
   const location = useLocation();
+  const [seeNav, setSeeNav] = useState(true);
+
+  useEffect(
+    () =>
+      location.pathname !== "/resume" ? setSeeNav(true) : setSeeNav(false),
+    [location]
+  );
 
   useEffect(() => {
     setTimeout(() => setDone(true), 1500);
   }, []);
 
   return (
-    <Container>
+    <Container seeNav={seeNav}>
       <Landing animationDone={animationDone} />
-      {location.pathname !== "/resume" && <Navigation />}
+      {seeNav && <Navigation />}
       <RoutesContainer>
         <AnimatedRoutes routesList={RoutesList} classNames="page" />
       </RoutesContainer>
