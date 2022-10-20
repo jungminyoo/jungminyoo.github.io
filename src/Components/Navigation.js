@@ -120,6 +120,7 @@ const Navigation = () => {
             .map((item, i) => (i === 0 ? item.toUpperCase() : item))
             .join("")
     );
+    console.log(current);
   }, [location]);
 
   return (

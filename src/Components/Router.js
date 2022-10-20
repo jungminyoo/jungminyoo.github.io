@@ -1,4 +1,4 @@
-import { HashRouter as Router } from "react-router-dom";
+import { useLocation, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
 import Landing from "Routes/Landing";
@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import RoutesList from "Lists/RoutesList";
 import AnimatedRoutes from "./AnimatedRoutes";
+import Resume from "Routes/Resume";
 
 const Container = styled.div`
   position: fixed;
@@ -47,21 +48,20 @@ const RoutesContainer = styled.div`
 
 const Routers = () => {
   const [animationDone, setDone] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => setDone(true), 1500);
   }, []);
 
   return (
-    <Router>
-      <Container>
-        <Landing animationDone={animationDone} />
-        <Navigation />
-        <RoutesContainer>
-          <AnimatedRoutes routesList={RoutesList} classNames="page" />
-        </RoutesContainer>
-      </Container>
-    </Router>
+    <Container>
+      <Landing animationDone={animationDone} />
+      {location.pathname !== "/resume" && <Navigation />}
+      <RoutesContainer>
+        <AnimatedRoutes routesList={RoutesList} classNames="page" />
+      </RoutesContainer>
+    </Container>
   );
 };
 

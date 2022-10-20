@@ -22,9 +22,9 @@ const AnimatedRoutes = ({ routesList, classNames }) => {
     <STransitionGroup>
       <CSSTransition key={location.key} classNames={classNames} timeout={2000}>
         <Routes>
-          {routesList.map(({ path, Component }, index) => (
+          {routesList.map(({ path, Component, id }) => (
             <Route
-              key={index}
+              key={id}
               exact
               path={path}
               element={
