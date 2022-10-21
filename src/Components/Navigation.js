@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import RoutesList from "Lists/RoutesList";
 import styled from "styled-components";
+import { useRecoilState } from "recoil";
+import { lastUpdatedAtom } from "atoms";
 
 const Container = styled.div`
   position: fixed;
@@ -87,6 +89,7 @@ const SLink = styled(Link)`
 const Copyright = styled.small`
   position: absolute;
   bottom: 15%;
+  line-height: 15px;
 
   font-size: 11px;
   color: rgba(0, 0, 0, 0.5);
@@ -106,6 +109,7 @@ const Copyright = styled.small`
 const Navigation = () => {
   const getMainName = () =>
     RoutesList.filter((route) => route.path === "/")[0].name;
+  const lastUpdated = useRecoilState(lastUpdatedAtom);
 
   const [current, setCurrent] = useState("");
   const location = useLocation();
@@ -120,7 +124,6 @@ const Navigation = () => {
             .map((item, i) => (i === 0 ? item.toUpperCase() : item))
             .join("")
     );
-    console.log(current);
   }, [location]);
 
   return (
@@ -143,7 +146,11 @@ const Navigation = () => {
               )
           )}
         </SUl>
-        <Copyright>&copy; 2022. Jungmin Yoo. ALL RIGHTS RESERVED</Copyright>
+        <Copyright>
+          Last Updated. {lastUpdated.toString().substring(0, 10)}
+          <br />
+          &copy; 2022. Jungmin Yoo. ALL RIGHTS RESERVED
+        </Copyright>
       </SubContainer>
     </Container>
   );
