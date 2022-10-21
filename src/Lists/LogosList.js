@@ -24,6 +24,14 @@ import nextdotjs from "Assets/SkillLogos/nextdotjs.svg";
 import graphql from "Assets/SkillLogos/graphql.svg";
 import tailwindcss from "Assets/SkillLogos/tailwindcss.svg";
 import redux from "Assets/SkillLogos/redux.svg";
+import recoil from "Assets/SkillLogos/recoil.svg";
+import awsamplify from "Assets/SkillLogos/awsamplify.svg";
+import arduino from "Assets/SkillLogos/arduino.svg";
+import microbit from "Assets/SkillLogos/microbit.svg";
+import roblox from "Assets/SkillLogos/roblox.svg";
+import styledcomponents from "Assets/SkillLogos/styledcomponents.svg";
+import axios from "Assets/SkillLogos/axios.svg";
+import reactquery from "Assets/SkillLogos/reactquery.svg";
 
 // Project Logos
 import miraeLogo from "Assets/ProjectImages/mirae/miraeLogo.svg";
@@ -65,6 +73,14 @@ const LogosList = {
   fanCakeLogo,
   portfolioLogo,
   cassopiLogo,
+  recoil,
+  awsamplify,
+  arduino,
+  microbit,
+  roblox,
+  styledcomponents,
+  axios,
+  reactquery,
 };
 
 export default LogosList;

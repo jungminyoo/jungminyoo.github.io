@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 const Wave = keyframes`
@@ -52,6 +53,7 @@ export const SkillLogo = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 55%;
+  height: 55%;
 `;
 
 export const SkillName = styled.span`
@@ -85,16 +87,29 @@ export const SkillWave = styled.div`
   animation: ${Wave} 15s infinite linear;
 `;
 
-export const generateSkill = (skill, { size, fontSize }, index) => (
-  <SkillContainer key={index}>
-    <SkillCircle color={skill.color} size={size}>
-      <WaveContainer color={skill.color}>
-        <SkillWave proficiency={skill.proficiency} />
-      </WaveContainer>
-      <SkillLogo src={skill.logo} alt={skill.name} />
-    </SkillCircle>
-    <SkillName className="skill_name" fontSize={fontSize}>
-      {skill.name}
-    </SkillName>
-  </SkillContainer>
-);
+export const GenerateSkill = (skill, { size, fontSize }, index) => {
+  const [isHover, setIsHover] = useState(false);
+
+  return (
+    <SkillContainer key={index}>
+      <SkillCircle
+        color={skill.color}
+        size={size}
+        onMouseOver={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        <WaveContainer color={skill.color}>
+          <SkillWave proficiency={skill.proficiency} />
+        </WaveContainer>
+        <SkillLogo src={skill.logo} alt={skill.name} />
+      </SkillCircle>
+      <SkillName className="skill_name" fontSize={fontSize}>
+        {isHover
+          ? skill.proficiency === 0
+            ? skill.name
+            : `${skill.proficiency}%`
+          : skill.name}
+      </SkillName>
+    </SkillContainer>
+  );
+};

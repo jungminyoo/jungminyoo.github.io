@@ -1,4 +1,4 @@
-import { generateSkill } from "Components/Skill";
+import { GenerateSkill } from "Components/Skill";
 import React from "react";
 import styled from "styled-components";
 
@@ -53,7 +53,7 @@ const SkillsHr = styled.hr`
 const SkillGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
   @media only screen and (max-width: 640px) {
     gap: 2vw;
   }
@@ -80,7 +80,7 @@ const SkillsPresenter = ({ skills }) => (
           <SkillsHr />
           <SkillGrid>
             {item.skills.map((skill) =>
-              generateSkill(
+              GenerateSkill(
                 skill,
                 { size: ["80px", "18vw"], fontSize: ["14px", "3.2vw"] },
                 index

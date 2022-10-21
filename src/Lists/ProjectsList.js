@@ -75,12 +75,12 @@ const ProjectsList = [
       {
         id: 1,
         type: "Front-end",
-        skills: getSkills("Front-end", ["Pug", "SCSS", "JavaScript"]),
+        skills: getSkills("Front-end", ["Pug", "SCSS"]),
       },
       {
         id: 2,
         type: "Back-end",
-        skills: getSkills("Back-end", ["Node.js", "Express.js", "MongoDB"]),
+        skills: getSkills("Back-end", ["Node.js", "Express", "MongoDB"]),
       },
       {
         id: 3,
@@ -169,9 +169,8 @@ const ProjectsList = [
         type: "Front-end",
         skills: getSkills("Front-end", [
           "React.js",
-          "JavaScript",
-          "HTML5",
-          "SCSS",
+          "styled-components",
+          "Axios",
         ]),
       },
     ],
@@ -193,7 +192,7 @@ const ProjectsList = [
   {
     id: 3,
     logo: LogosList["portfolioLogo"],
-    duration: "2021/12/29 - 2022/01/02",
+    duration: "2021/12/29 - 2022/01/02 | 2022/10/17 - Current",
     content: {
       KR: {
         title: "포트폴리오 사이트",
@@ -204,8 +203,8 @@ const ProjectsList = [
         },
         role: ["프론트엔드 개발", "UI/UX 디자인"],
         description:
-          "개인 포트폴리오 사이트를 제작했습니다. 2021 트렌드인 Glassmorphism 디자인을 일부 적용했습니다. Container-Presenter 패턴을 적용하고, 자주 쓰이는 코드는 최대한 모듈화 시키고자 노력했습니다.",
-        learned: ["CSS 활용 능력 향상", "코드 모듈화"],
+          "개인 포트폴리오 사이트를 제작했습니다. 2021 트렌드인 Glassmorphism 디자인을 일부 적용했습니다. Container-Presenter 패턴을 적용하고, 자주 쓰이는 코드는 최대한 모듈화 시키고자 노력했습니다. 이후에 포트폴리오 내용을 업데이트 할 때 '최소한의 코드 변경으로 완전한 업데이트가 되어야 한다'라는 원칙으로 코드를 작성했으며, 실제로 한 파일의 JavaScript 객체 코드만 수정하여 새로운 내용이 추가/삭제/변경 될 수 있도록 아키텍쳐를 설계하였습니다.",
+        learned: ["CSS 활용 능력 향상", "코드 모듈화", "나만의 아키텍쳐 설계"],
         achievements: [],
       },
       EN: {
@@ -217,8 +216,12 @@ const ProjectsList = [
         },
         role: ["Front-end Develop", "UI/UX Design"],
         description:
-          "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. We tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible.",
-        learned: ["Improvement of CSS skills", "Modulization of Codes"],
+          "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. We tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible. When updating portfolio content, code was written with the principle that 'it should be a complete update with minimal code changes' and the architecture was designed to allow new content to be added/deleted/changed by modifying only the JavaScript object code in one file.",
+        learned: [
+          "Improvement of CSS skills",
+          "Modulization of Codes",
+          "Designed my own code architecture",
+        ],
         achievements: [],
       },
     },
@@ -254,9 +257,9 @@ const ProjectsList = [
         type: "Front-end",
         skills: getSkills("Front-end", [
           "React.js",
-          "JavaScript",
-          "HTML5",
-          "SCSS",
+          "Recoil",
+          "Axios",
+          "styled-components",
         ]),
       },
     ],
@@ -357,11 +360,15 @@ const ProjectsList = [
         skills: getSkills("Front-end", [
           "React.js",
           "Next.js",
-          "JavaScript",
-          "HTML5",
-          "SCSS",
           "Redux",
+          "styled-components",
+          "Axios",
         ]),
+      },
+      {
+        id: 2,
+        type: "Infra",
+        skills: getSkills("Infra", ["AWS Amplify"]),
       },
     ],
     links: [
