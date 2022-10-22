@@ -90,7 +90,10 @@ const SkillsPresenter = ({ skills }) => (
         </SkillsBox>
       ))}
     </SkillsGrid>
-    <PSSpan>* 채워진 정도는 숙련도를 의미합니다</PSSpan>
+    <PSSpan>
+      * 채워진 정도는 숙련도를 의미합니다 / ~30% : 경험 | ~60% : 취미 or 공부중
+      | ~90% : 개발 가능
+    </PSSpan>
   </>
 );
 

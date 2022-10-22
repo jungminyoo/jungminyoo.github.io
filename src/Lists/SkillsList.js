@@ -12,7 +12,7 @@ const SkillsList = [
       },
       {
         name: "Next.js",
-        proficiency: 20,
+        proficiency: 50,
         color: "#000000",
         logo: LogosList["nextdotjs"],
       },
@@ -37,7 +37,7 @@ const SkillsList = [
       },
       {
         name: "React Query",
-        proficiency: 70,
+        proficiency: 50,
         color: "#FF4154",
         logo: LogosList["reactquery"],
       },
@@ -61,12 +61,12 @@ const SkillsList = [
         color: "#DB7093",
         logo: LogosList["styledcomponents"],
       },
-      // {
-      //   name: "TailwindCSS",
-      //   proficiency: 10,
-      //   color: "#06B6D4",
-      //   logo: LogosList["tailwindcss"],
-      // },
+      {
+        name: "TailwindCSS",
+        proficiency: 10,
+        color: "#06B6D4",
+        logo: LogosList["tailwindcss"],
+      },
     ],
   },
   {

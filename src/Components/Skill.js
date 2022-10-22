@@ -62,7 +62,9 @@ export const SkillName = styled.span`
   font-weight: 300;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   transition: all 0.1s ease-in-out;
+  max-width: ${(props) => props.size[0]};
   @media only screen and (max-width: 640px) {
+    max-width: ${(props) => props.size[1]};
     font-size: ${(props) => props.fontSize[1]} !important;
   }
 `;
@@ -103,7 +105,7 @@ export const GenerateSkill = (skill, { size, fontSize }, index) => {
         </WaveContainer>
         <SkillLogo src={skill.logo} alt={skill.name} />
       </SkillCircle>
-      <SkillName className="skill_name" fontSize={fontSize}>
+      <SkillName className="skill_name" fontSize={fontSize} size={size}>
         {isHover
           ? skill.proficiency === 0
             ? skill.name
