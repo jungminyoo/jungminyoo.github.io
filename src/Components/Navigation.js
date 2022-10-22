@@ -147,7 +147,7 @@ const Navigation = () => {
           )}
         </SUl>
         <Copyright>
-          Last Updated. {lastUpdated.toString().substring(0, 10)}
+          Last Updated. {lastUpdated && lastUpdated.toString().substring(0, 10)}
           <br />
           &copy; 2022. Jungmin Yoo. ALL RIGHTS RESERVED
         </Copyright>

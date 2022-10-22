@@ -23,13 +23,13 @@ const Container = styled.div`
 
   @media only screen and (max-width: 1080px) {
     padding-top: 12vh;
-    padding-left: 220px;
+    padding-left: ${(props) => (props.seeNav ? "220px" : "0px")};
     grid-template-columns: 1fr 6fr;
   }
 
   @media only screen and (max-width: 640px) {
     padding-top: 10vh;
-    padding-left: 25vw;
+    padding-left: ${(props) => (props.seeNav ? "25vw" : "0px")};
     grid-template-columns: 1fr 4fr;
   }
 `;
