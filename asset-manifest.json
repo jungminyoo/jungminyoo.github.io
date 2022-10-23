@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.e0a31e52.js",
+    "main.js": "/static/js/main.8c4e7f7e.js",
     "static/media/fanCakeHome.png": "/static/media/fanCakeHome.0ecdcf1af27acac5d2b5.png",
     "static/media/miraeHome.png": "/static/media/miraeHome.634edba61e4ed0ed5ba1.png",
     "static/media/cassopiMarket.png": "/static/media/cassopiMarket.c9285a69879c5b8d2722.png",
@@ -23,19 +23,25 @@
     "static/media/developing.png": "/static/media/developing.3005ca67d80702b204ed.png",
     "static/media/geneverLogo.png": "/static/media/geneverLogo.9d3fc2745b7d600b6113.png",
     "static/media/cassopiLogo.png": "/static/media/cassopiLogo.350228e58bc6805506f6.png",
+    "static/media/twisted_arrow.png": "/static/media/twisted_arrow.cd55615ecd2c90121b0f.png",
     "static/media/netlify.svg": "/static/media/netlify.25db89b7b0363b73db58ae478f70fe77.svg",
     "static/media/pug.svg": "/static/media/pug.d0eb53026617b9bbea9a2dc69af102bc.svg",
+    "static/media/reactquery.svg": "/static/media/reactquery.6e4b6f7af2ef0362cb03dd4e5ed797c8.svg",
     "static/media/miraeLogo.svg": "/static/media/miraeLogo.408f78fd4807852d76711610b0675699.svg",
     "static/media/amazons3.svg": "/static/media/amazons3.ecb2bb087a7edf60336c4dce119ff113.svg",
+    "static/media/recoil.svg": "/static/media/recoil.d5a898671e211f6833a12694778be74f.svg",
     "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
+    "static/media/styledcomponents.svg": "/static/media/styledcomponents.cd1aef9abdc7ee8bc7d755a201ef05fb.svg",
     "static/media/instagram.svg": "/static/media/instagram.ea1594d08cb44e60f546ec68e7c9fd22.svg",
     "static/media/nodedotjs.svg": "/static/media/nodedotjs.6d0ce605479079334bce77dc7c3be9ab.svg",
     "static/media/python.svg": "/static/media/python.e146c98dc5517bd9c7e63d6f63a6a1df.svg",
     "static/media/nextdotjs.svg": "/static/media/nextdotjs.02171293962bc80585c6e12ced8ca1c7.svg",
     "static/media/redux.svg": "/static/media/redux.a80e92c35427b6aed81fcc8f1dc285f7.svg",
+    "static/media/ev3.svg": "/static/media/ev3.87c4bb4b6c3f774a2c2f4b0efb68d007.svg",
     "static/media/typescript.svg": "/static/media/typescript.1b46c028879d6c94a56e6dfc1fd6797b.svg",
     "static/media/java.svg": "/static/media/java.7883010b90edfed49daa57f3b41b0833.svg",
     "static/media/sass.svg": "/static/media/sass.f39b61fa63da56122e4767f8ce57939b.svg",
+    "static/media/arduino.svg": "/static/media/arduino.dcd4358831929539076f990438ae49c7.svg",
     "static/media/github.svg": "/static/media/github.a9b6f24d0362eb68f7cc193789c457f8.svg",
     "static/media/express.svg": "/static/media/express.9c64af23d1b737aa5327ea6df99e9759.svg",
     "static/media/javascript.svg": "/static/media/javascript.5ee3c82fade3a5a9c98dc18702a4f717.svg",
@@ -51,13 +57,17 @@
     "static/media/scrolldown.svg": "/static/media/scrolldown.cd361e470b8f376ae92aa969c62082a6.svg",
     "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
     "static/media/c.svg": "/static/media/c.4b3cff5151588e79b8b1beb30ec237b2.svg",
+    "static/media/microbit.svg": "/static/media/microbit.ddfad1db6a23afc611a8b9806f23e858.svg",
     "static/media/css3.svg": "/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.e17125baa33c4c94988f2094042b15bc.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.87878d5ffd25a1bc7de02c4c630a5c98.svg",
-    "main.e0a31e52.js.map": "/static/js/main.e0a31e52.js.map"
+    "static/media/awsamplify.svg": "/static/media/awsamplify.452e41c2b5a0d3aaf4ba59de4975a2fe.svg",
+    "static/media/axios.svg": "/static/media/axios.9b4182eaab2e8e38fe0cdcea673368b9.svg",
+    "static/media/roblox.svg": "/static/media/roblox.903d85614c07cde5e98e1fba149ddb28.svg",
+    "main.8c4e7f7e.js.map": "/static/js/main.8c4e7f7e.js.map"
   },
   "entrypoints": [
-    "static/js/main.e0a31e52.js"
+    "static/js/main.8c4e7f7e.js"
   ]
 }
