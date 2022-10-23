@@ -6,7 +6,6 @@ import twisted_arrow from "Assets/twisted_arrow.png";
 import { useRecoilState } from "recoil";
 import { lastUpdatedAtom } from "atoms";
 import { GenerateSkill } from "Components/Skill";
-import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -187,6 +186,24 @@ const SectionTitle = styled.h2`
   margin-bottom: 25px;
 `;
 
+const AboutUl = styled.ul`
+  display: flex;
+  flex-direction: column;
+`;
+
+const AboutLi = styled.li`
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  list-style: disc;
+  list-style-position: inside;
+
+  & strong {
+    font-weight: 500;
+  }
+`;
+
 const SkillsGrid = styled.div`
   z-index: 5;
   width: 100%;
@@ -301,7 +318,7 @@ const MiniSectionLink = styled.a`
 const MiniSectionContent = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(max-content, 100px) 1fr;
+  grid-template-columns: 135px 1fr;
   gap: 20px;
 `;
 
@@ -326,11 +343,23 @@ const MiniSectionLeft = styled.div`
     color: white;
     font-size: 15px;
     font-weight: 300;
+    text-align: right;
+    word-break: keep-all;
   }
 
   & small {
     font-size: 10px;
     color: white;
+  }
+
+  & em {
+    font-size: 15px;
+  }
+
+  & div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -437,10 +466,10 @@ const ResumePresenter = ({
                   위의 모토를 가지고 열심히 개발하는{" "}
                   <strong className="purple">풀스택 주니어 웹 개발자</strong>
                   입니다. 단순히 개발만 하는 것이 아닌{" "}
-                  <strong className="blue">서비스 기획</strong>,{" "}
-                  <strong className="blue">UI/UX 디자인</strong>에도 관심을
+                  <strong className="purple">서비스 기획</strong>,{" "}
+                  <strong className="purple">UI/UX 디자인</strong>에도 관심을
                   가지며 사용자를 위한 최고의 서비스를 만들고자 하는{" "}
-                  <strong className="red">
+                  <strong className="purple">
                     개발자이자 기획자, 그리고 디자이너
                   </strong>
                   입니다.
@@ -451,12 +480,12 @@ const ResumePresenter = ({
                   I am a{" "}
                   <strong className="purple">full stack web developer</strong>{" "}
                   who develops hard with the motto above. I am a{" "}
-                  <strong className="red">
+                  <strong className="purple">
                     developer / planner / designer
                   </strong>{" "}
                   who is interested in{" "}
-                  <strong className="blue">service planning</strong>,{" "}
-                  <strong className="blue">UI/UX design</strong>, and wants to
+                  <strong className="purple">service planning</strong>,{" "}
+                  <strong className="purple">UI/UX design</strong>, and wants to
                   create the best service for users, not just development.
                 </IntroDescription>
               ),
@@ -470,6 +499,81 @@ const ResumePresenter = ({
 
         <Section>
           <SectionTitle>About.</SectionTitle>
+          <AboutUl>
+            {changeLang(lang, {
+              KR: (
+                <>
+                  <AboutLi>
+                    React.js, Next.js. Node.js를 기반으로 하는{" "}
+                    <strong>풀스택</strong>, 현재는 <strong>프론트엔드</strong>
+                    에 조금 더 가까운 주니어 웹 개발자입니다.
+                  </AboutLi>
+                  <AboutLi>
+                    저는 누구에게나 <strong>배우는 자세</strong>를 중요하게
+                    생각합니다. 제가 모르는 부분에 대해 계속 질문하고, 새로 알게
+                    된 내용을 다른 사람에게 공유하고 피드백 받는 과정이
+                    중요하다고 생각합니다. 이를 위해 개발 인스타, 블로그 등을
+                    개설하고 꾸준히 올리면서 실천하고자 노력하고 있습니다.
+                  </AboutLi>
+                  <AboutLi>
+                    <strong>업무적인 소통 방식</strong>에 관심이 많습니다.
+                    오프라인적인 소통 방식과 더불어, 문서나 온라인을 통한
+                    소통에도 관심이 많습니다. 원활한 소통과 토론으로 보다 더
+                    나은 서비스를 만드는 데 기여하고 싶은 것이 저의 목표입니다.
+                  </AboutLi>
+                  <AboutLi>
+                    <strong>SW 전반에 대한 이해도와 습득력</strong>이 있습니다.
+                    학생 때부터 웹 개발뿐만이 아닌 다양한 SW 적인 경험을 했으며,
+                    이를 통해 새로운 기술을 빠르게 습득하고 적용시키는 것을
+                    좋아하게 되었습니다.
+                  </AboutLi>
+                  <AboutLi>
+                    아직 실제 프로덕트를 많이 개발한 경험은 없지만, 이때까지
+                    저의 경험과 쌓은 역량을 관성 삼아 끊임없이 노력하는 개발자가
+                    되고자 합니다.
+                  </AboutLi>
+                </>
+              ),
+              EN: (
+                <>
+                  <AboutLi>
+                    I'm a junior web <strong>full-stack</strong> {"("}closer to{" "}
+                    <strong>front-end</strong>
+                    {")"} developer, based on React.js, Next.js, Node.js.
+                  </AboutLi>
+                  <AboutLi>
+                    I think <strong>learning attitude</strong> is important.
+                    It's important to keep asking questions about things I don't
+                    know, share new information with others, and get feedback.
+                    To this end, I opened development Instagram, blogs, etc. and
+                    upload posts steadily to practice them.
+                  </AboutLi>
+                  <AboutLi>
+                    I'm very interested in{" "}
+                    <strong>the way of business communication</strong>. In
+                    addition to offline communication methods, I am also
+                    interested in communication through documents and online. My
+                    goal is to contribute to making better services through
+                    smooth communication and discussion.
+                  </AboutLi>
+                  <AboutLi>
+                    I have{" "}
+                    <strong>
+                      an understanding and learning ability of SW as a whole
+                    </strong>
+                    . Since I was a student, I have had various SW experiences
+                    as well as web development, and through this, I have come to
+                    like to quickly acquire and apply new technologies.
+                  </AboutLi>
+                  <AboutLi>
+                    I haven't developed a lot of actual products yet, but I want
+                    to be a developer who constantly works hard with my
+                    experience and accumulated capabilities.
+                  </AboutLi>
+                </>
+              ),
+            })}
+          </AboutUl>
         </Section>
 
         <Section>
@@ -478,14 +582,16 @@ const ResumePresenter = ({
             {changeLang(lang, {
               KR: (
                 <PSSpan>
-                  * 채워진 정도는 숙련도를 의미합니다 / ~30% : 경험 | ~60% :
-                  취미 or 공부중 | ~90% : 개발 가능
+                  * 채워진 정도는 숙련도를 의미합니다. {"("}커서를 올리면 확인
+                  가능{")"} / ~30% : 경험 | ~60% : 취미 or 공부중 | ~90% : 개발
+                  가능
                 </PSSpan>
               ),
               EN: (
                 <PSSpan>
-                  * Filled means proficiency / ~30%: Experience | ~60%: Hobby or
-                  Studying | ~90% : Developable
+                  * Filled means proficiency {"("}Can see it when mouseover
+                  {")"} / ~30%: Experience | ~60%: Hobby or Studying | ~90% :
+                  Developable
                 </PSSpan>
               ),
             })}
@@ -527,10 +633,19 @@ const ResumePresenter = ({
                     {careerUrl.url} {careerUrl.isClosed && "(Closed)"}
                   </MiniSectionLink>
                   {careerSpecific.map(
-                    ({ position, span, descriptionList, skills }) => (
+                    ({
+                      position,
+                      positionIcon,
+                      span,
+                      descriptionList,
+                      skills,
+                    }) => (
                       <MiniSectionContent>
                         <MiniSectionLeft>
-                          <span>{position}</span>
+                          <div>
+                            <em>{positionIcon}</em>
+                            <span>{position}</span>
+                          </div>
                           <small>{span}</small>
                         </MiniSectionLeft>
                         <MiniSectionRight>
@@ -579,10 +694,19 @@ const ResumePresenter = ({
                     {careerUrl.url} {careerUrl.isClosed && "(Closed)"}
                   </MiniSectionLink>
                   {careerSpecific.map(
-                    ({ position, span, descriptionList, skills }) => (
+                    ({
+                      position,
+                      positionIcon,
+                      span,
+                      descriptionList,
+                      skills,
+                    }) => (
                       <MiniSectionContent>
                         <MiniSectionLeft>
-                          <span>{position}</span>
+                          <div>
+                            <em>{positionIcon}</em>
+                            <span>{position}</span>
+                          </div>
                           <small>{span}</small>
                         </MiniSectionLeft>
                         <MiniSectionRight>

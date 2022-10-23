@@ -53,7 +53,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "⚙️ 대회 사무국장",
+          positionIcon: "⚙️",
+          position: "대회 사무국장",
           span: "2019.03 - 2019.08",
           descriptionList: [
             "교내 메이킹 대회의 전체 사무국장으로서 대회를 주관하고 운영하였습니다.",
@@ -74,7 +75,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "⚙️ General Manager",
+          positionIcon: "⚙️",
+          position: "General Manager",
           span: "2019.03 - 2019.08",
           descriptionList: [
             "As the general manager of the school making competition, I organized and operated the competition.",
@@ -102,7 +104,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2021.09 - 2021.11",
           descriptionList: [
             "크리에이터 영상 (유튜브, 틱톡 등)을 NFT화하여 지분을 거래하는 fanCake 서비스의 MVP 프론트엔드 개발을 담당했습니다.",
@@ -129,7 +132,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2021.09 - 2021.11",
           descriptionList: [
             "I was in charge of developing the MVP front-end of the fanCake service, which trades stakes by NFTizing creator videos (YouTube, TikTok, etc.).",
@@ -160,7 +164,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2021.12 - 2022.03",
           descriptionList: [
             "성균관대 SPARK 프로그램에 참여하여 교수님과 지속적인 피드백을 통한 서비스 개발을 진행했습니다.",
@@ -188,7 +193,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2021.12 - 2022.03",
           descriptionList: [
             "We participated in the SPARK program at Sungkyunkwan University and developed the service through continuous feedback with the professor.",
@@ -219,7 +225,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍🏫 코딩강사 / 연구원",
+          positionIcon: "🧑🏻‍🏫",
+          position: "코딩강사 / 연구원",
           span: "2022.01 - 2022.09",
           descriptionList: [
             "초/중/고/대학생 대상으로 다양한 형태의 코딩/메이킹을 가르쳤습니다.",
@@ -241,7 +248,8 @@ export const careerList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍🏫 Coding Teacher / Researcher",
+          positionIcon: "🧑🏻‍🏫",
+          position: "Coding Teacher / Researcher",
           span: "2022.01 - 2022.09",
           descriptionList: [
             "I taught various forms of coding/making to elementary/middle/high/university students.",
@@ -269,7 +277,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Full-stack Develop",
+          positionIcon: "🧑🏻‍💻",
+          position: "Full-stack Developer",
           span: "2021.07 - 2021.08",
           descriptionList: [
             "첫 개인 프로젝트로, 지인을 통해 외주를 받아 진행했습니다.",
@@ -291,7 +300,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Full-stack Develop",
+          positionIcon: "🧑🏻‍💻",
+          position: "Full-stack Developer",
           span: "2021.07 - 2021.08",
           descriptionList: [
             "It was my first personal project, and I outsourced it through an acquaintance.",
@@ -320,7 +330,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "✏️ Student",
+          positionIcon: "✏️",
+          position: "Student",
           span: "2021.11",
           descriptionList: ["대학교 선형대수 과목 과제로 제작했습니다."],
           skills: [...getSkills("Languages", ["HTML5", "CSS3", "JavaScript"])],
@@ -333,7 +344,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "✏️ Student",
+          positionIcon: "✏️",
+          position: "Student",
           span: "2021.11",
           descriptionList: [
             "I made it as a university linear algebra subject assignment.",
@@ -355,7 +367,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "✏️ Student",
+          positionIcon: "✏️",
+          position: "Student",
           span: "2021.12",
           descriptionList: [
             "대학교 선형대수 과목 과제로 제작했습니다.",
@@ -371,7 +384,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "✏️ Student",
+          positionIcon: "✏️",
+          position: "Student",
           span: "2021.12",
           descriptionList: [
             "I made it as a university linear algebra subject assignment.",
@@ -394,7 +408,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2022.01 | 2022.10",
           descriptionList: [
             "개인 포트폴리오 사이트를 제작했습니다.",
@@ -419,7 +434,8 @@ export const miniProjectsList = [
       careerSpecific: [
         {
           id: 1,
-          position: "🧑🏻‍💻 Front-end Developer",
+          positionIcon: "🧑🏻‍💻",
+          position: "Front-end Developer",
           span: "2022.01 | 2022.10",
           descriptionList: [
             "I created a personal portfolio site.",
