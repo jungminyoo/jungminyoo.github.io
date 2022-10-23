@@ -216,7 +216,7 @@ const ProjectsList = [
         },
         role: ["Front-end Develop", "UI/UX Design"],
         description:
-          "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. We tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible. When updating portfolio content, code was written with the principle that 'it should be a complete update with minimal code changes' and the architecture was designed to allow new content to be added/deleted/changed by modifying only the JavaScript object code in one file.",
+          "I created a personal portfolio site. I applied some of the 2021 trend Glassmorphism design. I tried to apply the Container-Presenter pattern and modularize frequently used codes as much as possible. When updating portfolio content, code was written with the principle that 'it should be a complete update with minimal code changes' and the architecture was designed to allow new content to be added/deleted/changed by modifying only the JavaScript object code in one file.",
         learned: [
           "Improvement of CSS skills",
           "Modulization of Codes",

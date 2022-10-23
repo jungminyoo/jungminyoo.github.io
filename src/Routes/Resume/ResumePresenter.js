@@ -6,6 +6,7 @@ import twisted_arrow from "Assets/twisted_arrow.png";
 import { useRecoilState } from "recoil";
 import { lastUpdatedAtom } from "atoms";
 import { GenerateSkill } from "Components/Skill";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -173,7 +174,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
 
-  margin-top: 50px;
+  margin-top: 150px;
 `;
 
 const SectionTitle = styled.h2`
@@ -183,7 +184,7 @@ const SectionTitle = styled.h2`
   display: flex;
   align-items: flex-end;
 
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 `;
 
 const SkillsGrid = styled.div`
@@ -255,7 +256,131 @@ const PSSpan = styled.span`
   }
 `;
 
-const ResumePresenter = ({ lang, setLang, innerWidth, skills }) => {
+const MiniSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  width: 100%;
+`;
+
+const MiniSection = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+
+const MiniSectionTitle = styled.h3`
+  display: flex;
+  align-items: flex-end;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 5px;
+
+  & small {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    margin-left: 20px;
+  }
+`;
+
+const MiniSectionLink = styled.a`
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  margin-bottom: 15px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`;
+
+const MiniSectionContent = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(max-content, 100px) 1fr;
+  gap: 20px;
+`;
+
+const MiniSectionLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 10px;
+  background-color: #56536e;
+  border-radius: 5px;
+  height: min-content;
+
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(105%, 105%);
+    cursor: pointer;
+  }
+
+  & span {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  & small {
+    font-size: 10px;
+    color: white;
+  }
+`;
+
+const MiniSectionRight = styled.div`
+  width: 100%;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    margin-bottom: 15px;
+  }
+
+  & li {
+    list-style: inside;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  & h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+`;
+
+const MiniSectionRightSkills = styled.div`
+  display: flex;
+  gap: 7px;
+`;
+
+const LastMention = styled.span`
+  display: block;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+`;
+
+const ResumePresenter = ({
+  lang,
+  setLang,
+  innerWidth,
+  skills,
+  workExperiences,
+  miniProjects,
+  educationAndLicenses,
+}) => {
   const lastUpdated = useRecoilState(lastUpdatedAtom);
 
   return (
@@ -310,8 +435,8 @@ const ResumePresenter = ({ lang, setLang, innerWidth, skills }) => {
               KR: (
                 <IntroDescription>
                   위의 모토를 가지고 열심히 개발하는{" "}
-                  <strong className="purple">풀스택 웹 개발자</strong>입니다.
-                  단순히 개발만 하는 것이 아닌{" "}
+                  <strong className="purple">풀스택 주니어 웹 개발자</strong>
+                  입니다. 단순히 개발만 하는 것이 아닌{" "}
                   <strong className="blue">서비스 기획</strong>,{" "}
                   <strong className="blue">UI/UX 디자인</strong>에도 관심을
                   가지며 사용자를 위한 최고의 서비스를 만들고자 하는{" "}
@@ -387,15 +512,130 @@ const ResumePresenter = ({ lang, setLang, innerWidth, skills }) => {
 
         <Section>
           <SectionTitle>Work Experience.</SectionTitle>
+          <MiniSectionContainer>
+            {workExperiences.map(({ KR, EN, careerUrl }) => {
+              const { careerName, careerDescription, careerSpecific } =
+                changeLang(lang, { KR, EN });
+
+              return (
+                <MiniSection>
+                  <MiniSectionTitle>
+                    {careerName}
+                    <small>{careerDescription}</small>
+                  </MiniSectionTitle>
+                  <MiniSectionLink href={careerUrl.url} target="_blank">
+                    {careerUrl.url} {careerUrl.isClosed && "(Closed)"}
+                  </MiniSectionLink>
+                  {careerSpecific.map(
+                    ({ position, span, descriptionList, skills }) => (
+                      <MiniSectionContent>
+                        <MiniSectionLeft>
+                          <span>{position}</span>
+                          <small>{span}</small>
+                        </MiniSectionLeft>
+                        <MiniSectionRight>
+                          <ul>
+                            {descriptionList.map((description) => (
+                              <li>{description}</li>
+                            ))}
+                          </ul>
+                          <h4>Used Skills</h4>
+                          <MiniSectionRightSkills>
+                            {skills.map((skill, index) =>
+                              GenerateSkill(
+                                skill,
+                                {
+                                  size: ["57px", ""],
+                                  fontSize: ["12px", ""],
+                                },
+                                index
+                              )
+                            )}
+                          </MiniSectionRightSkills>
+                        </MiniSectionRight>
+                      </MiniSectionContent>
+                    )
+                  )}
+                </MiniSection>
+              );
+            })}
+          </MiniSectionContainer>
         </Section>
 
         <Section>
           <SectionTitle>Mini Projects.</SectionTitle>
+          <MiniSectionContainer>
+            {miniProjects.map(({ KR, EN, careerUrl }) => {
+              const { careerName, careerDescription, careerSpecific } =
+                changeLang(lang, { KR, EN });
+
+              return (
+                <MiniSection>
+                  <MiniSectionTitle>
+                    {careerName}
+                    <small>{careerDescription}</small>
+                  </MiniSectionTitle>
+                  <MiniSectionLink href={careerUrl.url} target="_blank">
+                    {careerUrl.url} {careerUrl.isClosed && "(Closed)"}
+                  </MiniSectionLink>
+                  {careerSpecific.map(
+                    ({ position, span, descriptionList, skills }) => (
+                      <MiniSectionContent>
+                        <MiniSectionLeft>
+                          <span>{position}</span>
+                          <small>{span}</small>
+                        </MiniSectionLeft>
+                        <MiniSectionRight>
+                          <ul>
+                            {descriptionList.map((description) => (
+                              <li>{description}</li>
+                            ))}
+                          </ul>
+                          <h4>Used Skills</h4>
+                          <MiniSectionRightSkills>
+                            {skills.map((skill, index) =>
+                              GenerateSkill(
+                                skill,
+                                {
+                                  size: ["57px", ""],
+                                  fontSize: ["12px", ""],
+                                },
+                                index
+                              )
+                            )}
+                          </MiniSectionRightSkills>
+                        </MiniSectionRight>
+                      </MiniSectionContent>
+                    )
+                  )}
+                </MiniSection>
+              );
+            })}
+          </MiniSectionContainer>
         </Section>
 
         <Section>
           <SectionTitle>Education & License.</SectionTitle>
         </Section>
+        <MiniSectionContainer style={{ gap: "20px" }}>
+          {educationAndLicenses.map(({ KR, EN }) => {
+            const { careerName, careerDescription } = changeLang(lang, {
+              KR,
+              EN,
+            });
+
+            return (
+              <MiniSection>
+                <MiniSectionTitle>
+                  {careerName}
+                  <small>{careerDescription}</small>
+                </MiniSectionTitle>
+              </MiniSection>
+            );
+          })}
+        </MiniSectionContainer>
+
+        <LastMention>--- 읽어주셔서 감사합니다! ---</LastMention>
       </Inner>
     </Container>
   );

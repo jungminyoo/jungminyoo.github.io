@@ -214,6 +214,12 @@ const SkillsList = [
         logo: LogosList["microbit"],
       },
       {
+        name: "EV3",
+        proficiency: 80,
+        color: "#D01012",
+        logo: LogosList["ev3"],
+      },
+      {
         name: "Roblox",
         proficiency: 50,
         color: "#000000",

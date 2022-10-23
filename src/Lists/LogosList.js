@@ -32,6 +32,7 @@ import roblox from "Assets/SkillLogos/roblox.svg";
 import styledcomponents from "Assets/SkillLogos/styledcomponents.svg";
 import axios from "Assets/SkillLogos/axios.svg";
 import reactquery from "Assets/SkillLogos/reactquery.svg";
+import ev3 from "Assets/SkillLogos/ev3.svg";
 
 // Project Logos
 import miraeLogo from "Assets/ProjectImages/mirae/miraeLogo.svg";
@@ -81,6 +82,7 @@ const LogosList = {
   styledcomponents,
   axios,
   reactquery,
+  ev3,
 };
 
 export default LogosList;

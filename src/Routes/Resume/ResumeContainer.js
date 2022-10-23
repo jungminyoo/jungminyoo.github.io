@@ -1,3 +1,8 @@
+import {
+  careerList,
+  educationAndLicensesList,
+  miniProjectsList,
+} from "Lists/CareerList";
 import SkillsList from "Lists/SkillsList";
 import React from "react";
 import ResumePresenter from "./ResumePresenter";
@@ -7,6 +12,9 @@ const EducationContainer = class extends React.Component {
     lang: "KR",
     innerWidth: window.innerWidth,
     skills: SkillsList,
+    workExperiences: careerList.reverse(),
+    miniProjects: miniProjectsList.reverse(),
+    educationAndLicenses: educationAndLicensesList,
   };
 
   componentDidMount = () => {

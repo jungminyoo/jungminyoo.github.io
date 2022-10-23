@@ -63,6 +63,7 @@ export const SkillName = styled.span`
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   transition: all 0.1s ease-in-out;
   max-width: ${(props) => props.size[0]};
+  word-break: break-all;
   @media only screen and (max-width: 640px) {
     max-width: ${(props) => props.size[1]};
     font-size: ${(props) => props.fontSize[1]} !important;
