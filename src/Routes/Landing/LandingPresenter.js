@@ -247,7 +247,7 @@ const SNSImg = styled.img`
 const SNSList = [
   {
     src: instagram,
-    href: "https://www.instagram.com/dev_yoo0918",
+    href: "https://www.instagram.com/devyoo02/",
   },
   {
     src: github,
