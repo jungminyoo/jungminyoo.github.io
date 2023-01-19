@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.2aa5e8d6.js",
+    "main.js": "/static/js/main.e29426a1.js",
     "static/media/fanCakeHome.png": "/static/media/fanCakeHome.0ecdcf1af27acac5d2b5.png",
     "static/media/miraeHome.png": "/static/media/miraeHome.634edba61e4ed0ed5ba1.png",
     "static/media/cassopiMarket.png": "/static/media/cassopiMarket.c9285a69879c5b8d2722.png",
@@ -65,9 +65,9 @@
     "static/media/awsamplify.svg": "/static/media/awsamplify.452e41c2b5a0d3aaf4ba59de4975a2fe.svg",
     "static/media/axios.svg": "/static/media/axios.9b4182eaab2e8e38fe0cdcea673368b9.svg",
     "static/media/roblox.svg": "/static/media/roblox.903d85614c07cde5e98e1fba149ddb28.svg",
-    "main.2aa5e8d6.js.map": "/static/js/main.2aa5e8d6.js.map"
+    "main.e29426a1.js.map": "/static/js/main.e29426a1.js.map"
   },
   "entrypoints": [
-    "static/js/main.2aa5e8d6.js"
+    "static/js/main.e29426a1.js"
   ]
 }
