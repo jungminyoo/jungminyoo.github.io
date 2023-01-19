@@ -266,6 +266,70 @@ export const careerList = [
     },
     careerUrl: { url: "http://makitcodelab.com", isClosed: false },
   },
+  {
+    id: 5,
+    KR: {
+      careerName: "엘리스 elice",
+      careerDescription: "우리 모두를 위한 교실, 코딩 교육 플랫폼",
+      careerSpecific: [
+        {
+          id: 1,
+          positionIcon: "🧑🏻‍💻",
+          position: "Technical Contents Developer",
+          span: "2022.12 - 현재",
+          descriptionList: [
+            "웹 개발 / 프로그래밍 언어 관련 성인 대상 교육 (부트캠프 등) 및 기업 교육을 목적으로 한 컨텐츠를 제작합니다.",
+            "필요한 경우 직접 강의를 진행합니다. (웹 개발 관련)",
+            "부트캠프 수강생들의 질문에 답하며 다양한 개발 관련 이슈를 처리합니다.",
+          ],
+          skills: [
+            ...getSkills("Front-end", ["React.js"]),
+            ...getSkills("Back-end", ["Node.js", "Express", "MongoDB"]),
+            ...getSkills("Languages", [
+              "Python",
+              "Java",
+              "JavaScript",
+              "TypeScript",
+              "HTML5",
+              "CSS3",
+            ]),
+            ...getSkills("Others", ["Git"]),
+          ],
+        },
+      ],
+    },
+    EN: {
+      careerName: "elice",
+      careerDescription: "classroom for everyone, coding education platform",
+      careerSpecific: [
+        {
+          id: 1,
+          positionIcon: "🧑🏻‍🏫",
+          position: "Technical Content Developer",
+          span: "2022.12 - Current",
+          descriptionList: [
+            "Produces content for adult education (boot camp, etc.) and corporate education under the theme of web development/programming language.",
+            "If necessary, I gives a lecture. (about Web Development)",
+            "Answer the questions of the boot camp students and deal with various development-related issues.",
+          ],
+          skills: [
+            ...getSkills("Front-end", ["React.js"]),
+            ...getSkills("Back-end", ["Node.js", "Express", "MongoDB"]),
+            ...getSkills("Languages", [
+              "Python",
+              "Java",
+              "JavaScript",
+              "TypeScript",
+              "HTML5",
+              "CSS3",
+            ]),
+            ...getSkills("Others", ["Git"]),
+          ],
+        },
+      ],
+    },
+    careerUrl: { url: "https://elice.io/", isClosed: false },
+  },
 ];
 
 export const miniProjectsList = [

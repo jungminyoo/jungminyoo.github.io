@@ -154,12 +154,12 @@ const SkillsList = [
         color: "#3776AB",
         logo: LogosList["python"],
       },
-      // {
-      //   name: "Java",
-      //   proficiency: 20,
-      //   color: "#007396",
-      //   logo: LogosList["java"],
-      // },
+      {
+        name: "Java",
+        proficiency: 20,
+        color: "#007396",
+        logo: LogosList["java"],
+      },
       {
         name: "JavaScript",
         proficiency: 80,
