@@ -90,11 +90,11 @@ export const SkillWave = styled.div`
   animation: ${Wave} 15s infinite linear;
 `;
 
-export const GenerateSkill = (skill, { size, fontSize }, index) => {
+const Skill = ({ skill, size: { size, fontSize } }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <SkillContainer key={index}>
+    <SkillContainer key={skill.id}>
       <SkillCircle
         color={skill.color}
         size={size}
@@ -116,3 +116,5 @@ export const GenerateSkill = (skill, { size, fontSize }, index) => {
     </SkillContainer>
   );
 };
+
+export default Skill;

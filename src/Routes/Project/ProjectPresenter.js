@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import KorEng, { changeLang } from "Components/KorEng";
-import { GenerateSkill } from "Components/Skill";
+import Skill from "Components/Skill";
 import React from "react";
 import styled, { css } from "styled-components";
 
@@ -529,13 +529,16 @@ const ProjectPresenter = ({
           <SkillContainer key={skills.id}>
             <span>{skills.type}</span>
             <SkillGrid>
-              {skills.skills.map((skill, index) =>
-                GenerateSkill(
-                  skill,
-                  { size: ["60px", "15vw"], fontSize: ["12px", "2.5vw"] },
-                  index
-                )
-              )}
+              {skills.skills.map((skill, index) => (
+                <Skill
+                  skill={skill}
+                  size={{
+                    size: ["60px", "15vw"],
+                    fontSize: ["12px", "2.5vw"],
+                  }}
+                  index={index}
+                />
+              ))}
             </SkillGrid>
           </SkillContainer>
         ))}

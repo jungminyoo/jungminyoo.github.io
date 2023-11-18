@@ -33,6 +33,9 @@ import styledcomponents from "Assets/SkillLogos/styledcomponents.svg";
 import axios from "Assets/SkillLogos/axios.svg";
 import reactquery from "Assets/SkillLogos/reactquery.svg";
 import ev3 from "Assets/SkillLogos/ev3.svg";
+import springboot from "Assets/SkillLogos/springboot.svg";
+import docker from "Assets/SkillLogos/docker.svg";
+import mysql from "Assets/SkillLogos/mysql.svg";
 
 // Project Logos
 import miraeLogo from "Assets/ProjectImages/mirae/miraeLogo.svg";
@@ -83,6 +86,9 @@ const LogosList = {
   axios,
   reactquery,
   ev3,
+  springboot,
+  docker,
+  mysql,
 };
 
 export default LogosList;

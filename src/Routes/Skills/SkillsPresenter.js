@@ -1,4 +1,4 @@
-import { GenerateSkill } from "Components/Skill";
+import Skill from "Components/Skill";
 import React from "react";
 import styled from "styled-components";
 
@@ -79,13 +79,16 @@ const SkillsPresenter = ({ skills }) => (
           <SkillsTitle>{item.type}</SkillsTitle>
           <SkillsHr />
           <SkillGrid>
-            {item.skills.map((skill) =>
-              GenerateSkill(
-                skill,
-                { size: ["80px", "18vw"], fontSize: ["14px", "3.2vw"] },
-                index
-              )
-            )}
+            {item.skills.map((skill) => (
+              <Skill
+                skill={skill}
+                size={{
+                  size: ["80px", "18vw"],
+                  fontSize: ["14px", "3.2vw"],
+                }}
+                index={index}
+              />
+            ))}
           </SkillGrid>
         </SkillsBox>
       ))}

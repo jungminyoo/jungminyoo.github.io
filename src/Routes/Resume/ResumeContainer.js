@@ -3,17 +3,19 @@ import {
   educationAndLicensesList,
   miniProjectsList,
 } from "Lists/CareerList";
-import SkillsList from "Lists/SkillsList";
 import React from "react";
 import ResumePresenter from "./ResumePresenter";
+import skillsList, { skillTypes } from "Lists/SkillsList";
 
 const EducationContainer = class extends React.Component {
   state = {
     lang: "KR",
     innerWidth: window.innerWidth,
-    skills: SkillsList,
-    workExperiences: careerList.reverse(),
-    miniProjects: miniProjectsList.reverse(),
+    skillsIsMain: true,
+    skills: skillsList,
+    skillTypes,
+    workExperiences: careerList.toReversed(),
+    miniProjects: miniProjectsList.toReversed(),
     educationAndLicenses: educationAndLicensesList,
   };
 
@@ -25,8 +27,20 @@ const EducationContainer = class extends React.Component {
 
   setLang = (clickedLang) => this.setState({ lang: clickedLang });
 
+  setSkillsIsMain = () => {
+    this.setState({
+      skillsIsMain: !this.state.skillsIsMain,
+    });
+  };
+
   render() {
-    return <ResumePresenter setLang={this.setLang} {...this.state} />;
+    return (
+      <ResumePresenter
+        setSkillsIsMain={this.setSkillsIsMain}
+        setLang={this.setLang}
+        {...this.state}
+      />
+    );
   }
 };
 

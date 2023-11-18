@@ -1,283 +1,328 @@
 import LogosList from "./LogosList";
 
-const SkillsList = [
-  {
-    type: "Front-end",
-    skills: [
-      {
-        name: "React.js",
-        proficiency: 80,
-        color: "#61DAFB",
-        logo: LogosList["reactJS"],
-      },
-      {
-        name: "Next.js",
-        proficiency: 50,
-        color: "#000000",
-        logo: LogosList["nextdotjs"],
-      },
-      {
-        name: "Redux",
-        proficiency: 60,
-        color: "#764ABC",
-        logo: LogosList["redux"],
-      },
-      {
-        name: "Recoil",
-        proficiency: 50,
-        color: "#3578E5",
-        logo: LogosList["recoil"],
-      },
+export const skillTypes = {
+  "Front-end": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "Back-end": [11, 12, 13, 14, 15, 16, 17, 36],
+  Infra: [18, 19, 20, 21],
+  Languages: [22, 23, 24, 25, 26, 27, 28, 29],
+  Others: [30, 31, 32, 33, 34],
+  Studying: [13, 2, 10, 18],
+};
 
-      {
-        name: "Axios",
-        proficiency: 90,
-        color: "#5A29E4",
-        logo: LogosList["axios"],
-      },
-      {
-        name: "React Query",
-        proficiency: 50,
-        color: "#FF4154",
-        logo: LogosList["reactquery"],
-      },
+const skillsList = [
+  {
+    id: 1,
+    name: "React.js",
+    proficiency: 80,
+    color: "#61DAFB",
+    logo: LogosList["reactJS"],
+    isMain: true,
+  },
+  {
+    id: 2,
+    name: "Next.js",
+    proficiency: 50,
+    color: "#000000",
+    logo: LogosList["nextdotjs"],
+    isMain: true,
+  },
+  {
+    id: 3,
+    name: "Redux",
+    proficiency: 60,
+    color: "#764ABC",
+    logo: LogosList["redux"],
+    isMain: false,
+  },
+  {
+    id: 4,
+    name: "Recoil",
+    proficiency: 50,
+    color: "#3578E5",
+    logo: LogosList["recoil"],
+    isMain: false,
+  },
+  {
+    id: 5,
+    name: "Axios",
+    proficiency: 90,
+    color: "#5A29E4",
+    logo: LogosList["axios"],
+    isMain: false,
+  },
+  {
+    id: 6,
+    name: "React Query",
+    proficiency: 50,
+    color: "#FF4154",
+    logo: LogosList["reactquery"],
+    isMain: false,
+  },
 
-      {
-        name: "Pug",
-        proficiency: 80,
-        color: "#A86454",
-        logo: LogosList["pug"],
-      },
+  {
+    id: 7,
+    name: "Pug",
+    proficiency: 80,
+    color: "#A86454",
+    logo: LogosList["pug"],
+    isMain: false,
+  },
 
-      {
-        name: "SCSS",
-        proficiency: 70,
-        color: "#CC6699",
-        logo: LogosList["sass"],
-      },
-      {
-        name: "styled-components",
-        proficiency: 70,
-        color: "#DB7093",
-        logo: LogosList["styledcomponents"],
-      },
-      {
-        name: "TailwindCSS",
-        proficiency: 10,
-        color: "#06B6D4",
-        logo: LogosList["tailwindcss"],
-      },
-    ],
+  {
+    id: 8,
+    name: "SCSS",
+    proficiency: 70,
+    color: "#CC6699",
+    logo: LogosList["sass"],
+    isMain: false,
   },
   {
-    type: "Back-end",
-    skills: [
-      {
-        name: "Node.js",
-        proficiency: 80,
-        color: "#339933",
-        logo: LogosList["nodedotjs"],
-      },
-      {
-        name: "Express",
-        proficiency: 70,
-        color: "#000000",
-        logo: LogosList["express"],
-      },
-      {
-        name: "MongoDB",
-        proficiency: 70,
-        color: "#47A248",
-        logo: LogosList["mongodb"],
-      },
-      {
-        name: "Socket.io",
-        proficiency: 20,
-        color: "#010101",
-        logo: LogosList["socketdotio"],
-      },
-      {
-        name: "WebRTC",
-        proficiency: 20,
-        color: "#333333",
-        logo: LogosList["webrtc"],
-      },
-    ],
+    id: 9,
+    name: "styled-components",
+    proficiency: 70,
+    color: "#DB7093",
+    logo: LogosList["styledcomponents"],
+    isMain: false,
   },
   {
-    type: "Infra",
-    skills: [
-      {
-        name: "Heroku",
-        proficiency: 0,
-        color: "#430098",
-        logo: LogosList["heroku"],
-      },
-      {
-        name: "AWS S3",
-        proficiency: 0,
-        color: "#569A31",
-        logo: LogosList["amazons3"],
-      },
-      {
-        name: "Netlify",
-        proficiency: 0,
-        color: "#00C7B7",
-        logo: LogosList["netlify"],
-      },
-      {
-        name: "AWS Amplify",
-        proficiency: 0,
-        color: "#FF9900",
-        logo: LogosList["awsamplify"],
-      },
-    ],
+    id: 10,
+    name: "TailwindCSS",
+    proficiency: 10,
+    color: "#06B6D4",
+    logo: LogosList["tailwindcss"],
+    isMain: false,
+  },
+
+  {
+    id: 11,
+    name: "Node.js",
+    proficiency: 80,
+    color: "#339933",
+    logo: LogosList["nodedotjs"],
+    isMain: true,
   },
   {
-    type: "Languages",
-    skills: [
-      {
-        name: "C",
-        proficiency: 90,
-        color: "#A8B9CC",
-        logo: LogosList["c"],
-      },
-      {
-        name: "C++",
-        proficiency: 60,
-        color: "#00599C",
-        logo: LogosList["cplusplus"],
-      },
-      {
-        name: "Python",
-        proficiency: 90,
-        color: "#3776AB",
-        logo: LogosList["python"],
-      },
-      {
-        name: "Java",
-        proficiency: 20,
-        color: "#007396",
-        logo: LogosList["java"],
-      },
-      {
-        name: "JavaScript",
-        proficiency: 80,
-        color: "#F7DF1E",
-        logo: LogosList["javascript"],
-      },
-      {
-        name: "TypeScript",
-        proficiency: 60,
-        color: "#3178C6",
-        logo: LogosList["typescript"],
-      },
-      {
-        name: "HTML5",
-        proficiency: 90,
-        color: "#E34F26",
-        logo: LogosList["html5"],
-      },
-      {
-        name: "CSS3",
-        proficiency: 70,
-        color: "#1572B6",
-        logo: LogosList["css3"],
-      },
-    ],
+    id: 12,
+    name: "Express",
+    proficiency: 70,
+    color: "#000000",
+    logo: LogosList["express"],
+    isMain: true,
   },
   {
-    type: "Others",
-    skills: [
-      {
-        name: "Git",
-        proficiency: 80,
-        color: "#F05032",
-        logo: LogosList["git"],
-      },
-      {
-        name: "GitHub",
-        proficiency: 80,
-        color: "#181717",
-        logo: LogosList["github"],
-      },
-      {
-        name: "Arduino",
-        proficiency: 80,
-        color: "#00979D",
-        logo: LogosList["arduino"],
-      },
-      {
-        name: "Microbit",
-        proficiency: 80,
-        color: "#00ED00",
-        logo: LogosList["microbit"],
-      },
-      {
-        name: "EV3",
-        proficiency: 80,
-        color: "#D01012",
-        logo: LogosList["ev3"],
-      },
-      {
-        name: "Roblox",
-        proficiency: 50,
-        color: "#000000",
-        logo: LogosList["roblox"],
-      },
-    ],
+    id: 13,
+    name: "Spring Boot",
+    proficiency: 20,
+    color: "#6DB33F",
+    logo: LogosList["springboot"],
+    isMain: true,
   },
   {
-    type: "Studying",
-    skills: [
-      {
-        name: "Next.js",
-        proficiency: 0,
-        color: "#000000",
-        logo: LogosList["nextdotjs"],
-      },
-      {
-        name: "TailwindCSS",
-        proficiency: 0,
-        color: "#06B6D4",
-        logo: LogosList["tailwindcss"],
-      },
-      {
-        name: "TypeScript",
-        proficiency: 0,
-        color: "#3178C6",
-        logo: LogosList["typescript"],
-      },
-      // {
-      //   name: "GraphQL",
-      //   proficiency: 0,
-      //   color: "#E10098",
-      //   logo: LogosList["graphql"],
-      // },
-      // {
-      //   name: "React Native",
-      //   proficiency: 0,
-      //   color: "#61DAFB",
-      //   logo: LogosList["reactJS"],
-      // },
-    ],
+    id: 14,
+    name: "MongoDB",
+    proficiency: 70,
+    color: "#47A248",
+    logo: LogosList["mongodb"],
+    isMain: false,
   },
+  {
+    id: 15,
+    name: "MySQL",
+    proficiency: 50,
+    color: "#4479A1",
+    logo: LogosList["mysql"],
+    isMain: false,
+  },
+  {
+    id: 16,
+    name: "Socket.io",
+    proficiency: 10,
+    color: "#010101",
+    logo: LogosList["socketdotio"],
+    isMain: false,
+  },
+  {
+    id: 17,
+    name: "WebRTC",
+    proficiency: 5,
+    color: "#333333",
+    logo: LogosList["webrtc"],
+    isMain: false,
+  },
+
+  {
+    id: 18,
+    name: "Docker",
+    proficiency: 0,
+    color: "#2496ED",
+    logo: LogosList["docker"],
+    isMain: false,
+  },
+  {
+    id: 19,
+    name: "Heroku",
+    proficiency: 0,
+    color: "#430098",
+    logo: LogosList["heroku"],
+    isMain: false,
+  },
+  {
+    id: 20,
+    name: "AWS S3",
+    proficiency: 0,
+    color: "#569A31",
+    logo: LogosList["amazons3"],
+    isMain: false,
+  },
+  {
+    id: 21,
+    name: "Netlify",
+    proficiency: 0,
+    color: "#00C7B7",
+    logo: LogosList["netlify"],
+    isMain: false,
+  },
+
+  {
+    id: 22,
+    name: "C",
+    proficiency: 90,
+    color: "#A8B9CC",
+    logo: LogosList["c"],
+    isMain: false,
+  },
+  {
+    id: 23,
+    name: "C++",
+    proficiency: 60,
+    color: "#00599C",
+    logo: LogosList["cplusplus"],
+    isMain: false,
+  },
+  {
+    id: 24,
+    name: "Python",
+    proficiency: 90,
+    color: "#3776AB",
+    logo: LogosList["python"],
+    isMain: false,
+  },
+  {
+    id: 25,
+    name: "Java",
+    proficiency: 60,
+    color: "#007396",
+    logo: LogosList["java"],
+    isMain: true,
+  },
+  {
+    id: 26,
+    name: "JavaScript",
+    proficiency: 80,
+    color: "#F7DF1E",
+    logo: LogosList["javascript"],
+    isMain: true,
+  },
+  {
+    id: 27,
+    name: "TypeScript",
+    proficiency: 60,
+    color: "#3178C6",
+    logo: LogosList["typescript"],
+    isMain: true,
+  },
+  {
+    id: 28,
+    name: "HTML5",
+    proficiency: 90,
+    color: "#E34F26",
+    logo: LogosList["html5"],
+    isMain: true,
+  },
+  {
+    id: 29,
+    name: "CSS3",
+    proficiency: 70,
+    color: "#1572B6",
+    logo: LogosList["css3"],
+    isMain: true,
+  },
+
+  {
+    id: 30,
+    name: "Git",
+    proficiency: 80,
+    color: "#F05032",
+    logo: LogosList["git"],
+    isMain: true,
+  },
+  {
+    id: 31,
+    name: "GitHub",
+    proficiency: 80,
+    color: "#181717",
+    logo: LogosList["github"],
+    isMain: true,
+  },
+  {
+    id: 32,
+    name: "Arduino",
+    proficiency: 80,
+    color: "#00979D",
+    logo: LogosList["arduino"],
+    isMain: false,
+  },
+  {
+    id: 33,
+    name: "Microbit",
+    proficiency: 80,
+    color: "#00ED00",
+    logo: LogosList["microbit"],
+    isMain: false,
+  },
+  {
+    id: 34,
+    name: "EV3",
+    proficiency: 80,
+    color: "#D01012",
+    logo: LogosList["ev3"],
+    isMain: false,
+  },
+  {
+    id: 35,
+    name: "Roblox",
+    proficiency: 50,
+    color: "#000000",
+    logo: LogosList["roblox"],
+    isMain: false,
+  },
+  {
+    id: 36,
+    name: "GraphQL",
+    proficiency: 50,
+    color: "#E10098",
+    logo: LogosList["graphql"],
+    isMain: false,
+  },
+  // {
+  //   id: 40,
+  //   name: "React Native",
+  //   proficiency: 0,
+  //   color: "#61DAFB",
+  //   logo: LogosList["reactJS"],
+  //   isMain: false,
+  // },
 ];
 
-export const getSkills = (typeName, skillNames) => {
+export const getSkills = (skillNames) => {
   const result = [];
 
-  SkillsList.forEach(
-    (item) =>
-      item.type === typeName &&
-      item.skills.forEach((skill) => {
-        if (skillNames.includes(skill.name)) {
-          result.push(skill);
-        }
-      })
+  skillsList.forEach(
+    ({ name }, index) =>
+      skillNames.includes(name) && result.push(skillsList[index])
   );
 
   return result;
 };
 
-export default SkillsList;
+export default skillsList;
