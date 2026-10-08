@@ -308,7 +308,7 @@ export const careerList = [
           id: 2,
           positionIcon: "🧑🏻‍💻",
           position: "Technical Contents Developer",
-          span: "2023.04 - 현재",
+          span: "2023.04 - 2025.02",
           descriptionList: [
             "웹 개발 / 프로그래밍 언어 관련 기업 교육 및 디지털 트랜스포메이션을 목적으로 한 컨텐츠를 제작합니다.",
             "웹 개발 관련 기업 교육 요청에 대한 커리큘럼을 구성합니다.",
@@ -343,7 +343,7 @@ export const careerList = [
           id: 1,
           positionIcon: "🧑🏻‍🏫",
           position: "Technical Content Developer",
-          span: "2022.12 - Current",
+          span: "2022.12 - 2023.04",
           descriptionList: [
             "Produces content for adult education (boot camp, etc.) and corporate education under the theme of web development/programming language.",
             "If necessary, I gives a lecture. (about Web Development)",
@@ -369,7 +369,7 @@ export const careerList = [
           id: 2,
           positionIcon: "🧑🏻‍💻",
           position: "Technical Contents Developer",
-          span: "2023.04 - Current",
+          span: "2023.04 - 2025.02",
           descriptionList: [
             "Create contents for corporate education and digital transformation related to web development/programming languages.",
             "Construct a curriculum for corporate training requests related to web development.",
