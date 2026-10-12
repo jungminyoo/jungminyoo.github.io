@@ -600,13 +600,12 @@ export const educationAndLicensesList = [
     id: 1,
     KR: {
       careerName: "한양대학교",
-      careerDescription:
-        "컴퓨터소프트웨어학부 | 2021.03 ~ 휴학중 | ~ 1학년 이수",
+      careerDescription: "컴퓨터소프트웨어학부 | 2021.03 ~ | 3학년",
     },
     EN: {
       careerName: "Hanyang University",
       careerDescription:
-        "Department of Computer Software | 2021.03 ~ Taking a leave of absence | ~ Completed 1st grade",
+        "Department of Computer Software | 2021.03 ~ | 3rd grade",
     },
   },
   {
